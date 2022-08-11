@@ -113,8 +113,11 @@ const ContactFormWrapper = styled.form`
     }
   }
 `;
-const ContactWelcome = styled.p`
+const ContactWelcome = styled.div`
   max-width: 570px;
+  p{
+    margin-bottom: 8px;
+  }
 `;
 
 const ContactRadioWrap = styled.div``;

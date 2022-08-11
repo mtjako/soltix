@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 
-export default function CTASection() {
+export default function CTASection({title}) {
   gsap.registerPlugin(ScrollTrigger);
   const ImgRef = useRef(null);
   const TitleRef = useRef(null);
@@ -89,8 +89,7 @@ export default function CTASection() {
         </div>
         <div ref={TitleRef} className="box">
           <h3>
-            Wiesz, że w Twojej firmie potrzebna jest automatyzacja /
-            digitalizacja, ale&nbsp;nie wiesz jak za to się zabrać?
+            {title ? title : "Wiesz, że w Twojej firmie potrzebna jest automatyzacja / digitalizacja, ale&nbsp;nie wiesz jak za to się zabrać?"}
           </h3>
           <h2>
             Software House'y oczekują od Ciebie specyfikacji, ale nie wiesz jak
@@ -108,7 +107,7 @@ export default function CTASection() {
               <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
             </div>
           </Link>
-          <Link href="/contact">
+          <Link href="/modeofaction">
             <div className="center">
               <InfoText>Jak wyglądają warsztaty?</InfoText>
             </div>

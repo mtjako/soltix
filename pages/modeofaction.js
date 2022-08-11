@@ -9,6 +9,7 @@ import Tools from "../components/modeofaction/Tools";
 import Header from "../components/layout/Header";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
+import Contact from "../components/home/Contact";
 import CTASection from "../components/home/CTASection";
 
 export default function ModeOfAction() {
@@ -62,8 +63,8 @@ export default function ModeOfAction() {
         <TopText>
           <div ref={TitleRef}>
             <Header
-              subtitle="Jak działamy"
-              title="Pracując na Twój sukces"
+              subtitle="JAK WYGLĄDAJĄ DARMOWE WARSZTATY?"
+              title="DARMOWE WARSZTATY oraz dalsze kroki rozwoju Twojego oprogramowania"
               center
             />
           </div>
@@ -71,6 +72,7 @@ export default function ModeOfAction() {
         </TopText>
       </Wrapper>
       <Timeline />
+      <CTASection />
       <Footer />
     </>
   );

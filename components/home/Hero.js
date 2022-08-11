@@ -102,7 +102,7 @@ export default function Hero({ title, subtitle, main }) {
             <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
           </div>
         </Link>
-        <Link href="/contact">
+        <Link href="/modeofaction">
           <InfoText>Jak wyglądają warsztaty?</InfoText>
         </Link>
       </HeroText>

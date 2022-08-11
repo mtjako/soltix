@@ -101,7 +101,7 @@ export default function CTASection() {
               <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
             </div>
           </Link>
-          <Link href="/contact">
+          <Link href="/modeofaction">
             <div className="center">
               <InfoText>Jak wyglądają warsztaty?</InfoText>
             </div>

@@ -50,7 +50,7 @@ export default function Home() {
         subtitle="Startup"
       />
       <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla osób posiadających pomysł na start-up?" />
-      <CTASection />
+      <CTASection title="Masz pomysł na start-up, ale nie wiesz jak za to się zabrać? "/>
       <Team />
       <Contact />
       <Footer />

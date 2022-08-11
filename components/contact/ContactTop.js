@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function ContactTop({ step, steps }) {
   return (
     <ContactTopWrapper>
-      <Title>Kontakt</Title>
+      <Title>Darmowe Warsztaty</Title>
       <ProgressWrap>
         <ProgressBar progress={(100 / steps) * step} />
         <ProgressText>

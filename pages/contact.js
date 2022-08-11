@@ -16,12 +16,17 @@ export default function Contact() {
       type: "welcome",
       title: "Umów darmowe warsztaty",
       data: [
-        "Zanim się spotkamy, odpowiedź na kilka pytań. Zajmie Ci to około 1 minutę. Warsztaty są dedykowane firmom oraz założycielom start-up’ów. Warsztaty są całkowicie darmowe i trwają około 1h. Na warsztatach poznamy Twoją firmę, obszary, które wymagają informatyzacji, przeprowadzimy wstępny szkic oprogramowania, a Ty poznasz nasze kompetencje.",
+        `
+        <p>Zanim się spotkamy, odpowiedź na kilka pytań.</p>
+        <p>Zajmie Ci to <b>około 1 minutę</b>.</p>
+        <p>Warsztaty są dedykowane firmom oraz założycielom start-up’ów. Warsztaty są <b>całkowicie darmowe i trwają około 1h</b>.</p>
+        <p>Na warsztatach poznamy Twoją firmę, obszary, które wymagają informatyzacji, przeprowadzimy wstępny szkic oprogramowania, a Ty poznasz nasze kompetencje.</p>
+        `,
       ],
     },
     {
       type: "radio",
-      title: "Powiedz nam czego szukasz lub potrzebujesz",
+      title: "Powiedz nam czego szukasz lub potrzebujesz*",
       data: [
         "Szukam usprawnienia dla firmy",
         "Potrzebuję wsparcia w tworzeniu start-up’u",
@@ -35,13 +40,13 @@ export default function Contact() {
     },
     {
       type: "radio",
-      title: "Ile osób pracuje w firmie?",
+      title: "Ile osób pracuje w firmie?*",
       data: ["1-9", "10-19", "20-49", "50-100", "ponad 100"],
     },
     {
       type: "radio",
       title:
-        "Jaki budżet firma jest w stanie przeznaczyć na budowę oprogramowania?",
+        "Jaki budżet firma jest w stanie przeznaczyć na budowę oprogramowania?*",
       data: [
         "Do 50k PLN netto",
         "50k - 100k PLN netto",
@@ -52,24 +57,24 @@ export default function Contact() {
     },
     {
       type: "radio",
-      title: "Preferowana forma warsztatów",
+      title: "Preferowana forma warsztatów*",
       data: ["Spotkanie osobiste", "Spotkanie on-line"],
     },
     {
       type: "textarea",
-      title: "Podaj proszę preferowany termin oraz godzinę warsztatów",
+      title: "Podaj proszę preferowany termin oraz godzinę warsztatów*",
       data: ["describe"],
     },
     {
       type: "input",
       title: "Zostaw nam swoje dane kontaktowe",
       data: [
-        { type: "text", name: "Imię", required: true },
-        { type: "text", name: "Nazwisko", required: true },
+        { type: "text", name: "Imię*", required: true },
+        { type: "text", name: "Nazwisko*", required: true },
         { type: "text", name: "Nazwa firmy", required: false },
-        { type: "text", name: "Stanowisko", required: false },
-        { type: "email", name: "E-mail", required: true },
-        { type: "text", name: "Numer telefonu", required: true },
+        { type: "text", name: "Stanowisko*", required: true },
+        { type: "email", name: "E-mail*", required: true },
+        { type: "text", name: "Numer telefonu*", required: true },
         {
           type: "checkbox",
           name: "Czy przed udzieleniem szerszych informacji chcesz podpisać z nami NDA?",
@@ -152,7 +157,7 @@ export default function Contact() {
             arr.push(item.value);
           }
         } else {
-          if (item.value.length === 0) isEmpty == 0 ? (isEmpty = 1) : "";
+          if (item.required && item.value.length === 0) isEmpty == 0 ? (isEmpty = 1) : "";
           arr.push(item.value);
         }
       });

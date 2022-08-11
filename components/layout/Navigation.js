@@ -17,10 +17,10 @@ export default function Navigation() {
           </div>
         </Link>
         <Menu>
-          <Link href="/dedicatedsoftware" passHref>
+          <Link href="/modeofaction" passHref>
             <MenuItem>Jak wyglądają darmowe warsztaty?</MenuItem>
           </Link>
-          <DropdownBtn href="/modeofaction" passHref>
+          <DropdownBtn>
             <MenuItem onClick={() => setDropdownOpen(!dropdownOpen)}>
               <p>Jak usprawnimy działanie</p>
               <Image
