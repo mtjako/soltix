@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <Nav>
       <NavWrap>
@@ -17,10 +18,60 @@ export default function Navigation() {
         </Link>
         <Menu>
           <Link href="/dedicatedsoftware" passHref>
-            <MenuItem>Oprogramowanie dedykowane</MenuItem>
+            <MenuItem>Jak wyglądają darmowe warsztaty?</MenuItem>
           </Link>
-          <Link href="/modeofaction" passHref>
-            <MenuItem>Sposób działania</MenuItem>
+          <DropdownBtn href="/modeofaction" passHref>
+            <MenuItem onClick={() => setDropdownOpen(!dropdownOpen)}>
+              <p>Jak usprawnimy działanie</p>
+              <Image
+                src="/home/hero/chevron.svg"
+                alt="arrow"
+                width={20}
+                height={20}
+              />
+            </MenuItem>
+            {dropdownOpen && (
+              <Dropdown>
+                <Link href="/firmyProdukcyjne">
+                  <DropdownItem onClick={() => setDropdownOpen(false)}>
+                    Firmy produkcyjnej
+                  </DropdownItem>
+                </Link>
+                <Link href="/firmyTransportowe">
+                  <DropdownItem onClick={() => setDropdownOpen(false)}>
+                    Firmy transportowej
+                  </DropdownItem>
+                </Link>
+                <Link href="/firmyTransportowe">
+                  <DropdownItem onClick={() => setDropdownOpen(false)}>
+                    Magazynu
+                  </DropdownItem>
+                </Link>
+                <Link href="/firmyTransportowe">
+                  <DropdownItem onClick={() => setDropdownOpen(false)}>
+                    Kancelarii prawnej
+                  </DropdownItem>
+                </Link>
+                <Link href="/firmyTransportowe">
+                  <DropdownItem onClick={() => setDropdownOpen(false)}>
+                    Sklepu internetowego
+                  </DropdownItem>
+                </Link>
+                <Link href="/firmyTransportowe">
+                  <DropdownItem onClick={() => setDropdownOpen(false)}>
+                    Działu HR
+                  </DropdownItem>
+                </Link>
+                <Link href="/firmyTransportowe">
+                  <DropdownItem onClick={() => setDropdownOpen(false)}>
+                    Firmy usługowej
+                  </DropdownItem>
+                </Link>
+              </Dropdown>
+            )}
+          </DropdownBtn>
+          <Link href="/startup" passHref>
+            <MenuItem>Masz pomysł na start’up?</MenuItem>
           </Link>
           <Link href="/contact" passHref>
             <MenuItem>Kontakt</MenuItem>
@@ -31,10 +82,52 @@ export default function Navigation() {
         </HamburgerIcon>
         <HamburgerMenu className={isOpen ? "active" : ""}>
           <Link href="/dedicatedsoftware" passHref>
-            <HamburgerMenuItem>Oprogramowanie dedykowane</HamburgerMenuItem>
+            <HamburgerMenuItem>
+              Jak wyglądają darmowe warsztaty?
+            </HamburgerMenuItem>
           </Link>
-          <Link href="/modeofaction" passHref>
-            <HamburgerMenuItem>Sposób działania</HamburgerMenuItem>
+
+          <HamburgerMenuItem>Jak usprawnimy działanie</HamburgerMenuItem>
+          <div>
+            <Link href="/firmyProdukcyjne">
+              <DropdownItem onClick={() => setDropdownOpen(false)}>
+                Firmy produkcyjnej
+              </DropdownItem>
+            </Link>
+            <Link href="/firmyTransportowe">
+              <DropdownItem onClick={() => setDropdownOpen(false)}>
+                Firmy transportowej
+              </DropdownItem>
+            </Link>
+            <Link href="/firmyTransportowe">
+              <DropdownItem onClick={() => setDropdownOpen(false)}>
+                Magazynu
+              </DropdownItem>
+            </Link>
+            <Link href="/firmyTransportowe">
+              <DropdownItem onClick={() => setDropdownOpen(false)}>
+                Kancelarii prawnej
+              </DropdownItem>
+            </Link>
+            <Link href="/firmyTransportowe">
+              <DropdownItem onClick={() => setDropdownOpen(false)}>
+                Sklepu internetowego
+              </DropdownItem>
+            </Link>
+            <Link href="/firmyTransportowe">
+              <DropdownItem onClick={() => setDropdownOpen(false)}>
+                Działu HR
+              </DropdownItem>
+            </Link>
+            <Link href="/firmyTransportowe">
+              <DropdownItem onClick={() => setDropdownOpen(false)}>
+                Firmy usługowej
+              </DropdownItem>
+            </Link>
+          </div>
+
+          <Link href="/contact" passHref>
+            <HamburgerMenuItem>Masz pomysł na start’up?</HamburgerMenuItem>
           </Link>
           <Link href="/contact" passHref>
             <HamburgerMenuItem>Kontakt</HamburgerMenuItem>
@@ -44,6 +137,27 @@ export default function Navigation() {
     </Nav>
   );
 }
+
+const Dropdown = styled.div`
+  width: max-content;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 7px 20px 0px rgb(42 22 139 / 8%);
+`;
+const DropdownItem = styled.div`
+  background-color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f5f5f5;
+  }
+`;
+
+const DropdownBtn = styled.div`
+  position: relative;
+`;
 
 const Nav = styled.div`
   width: 100%;
@@ -83,7 +197,13 @@ const Menu = styled.ul`
 const MenuItem = styled.li`
   padding: 0 20px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  p {
+    color: inherit;
+    margin-right: 4px;
+  }
   &::selection {
     background: transparent;
   }
@@ -106,6 +226,7 @@ const HamburgerMenu = styled.div`
   top: 72px;
   right: -100vw;
   transition: right 0.75s;
+  overflow-y: scroll;
   &.active {
     right: 0;
   }

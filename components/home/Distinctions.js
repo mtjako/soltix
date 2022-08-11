@@ -6,22 +6,30 @@ import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Header from "../layout/Header";
 
-export default function Distinctions() {
+export default function Distinctions({ title }) {
   const itemData = [
     {
-      img: "/home/distinctions/distinctions3.svg",
-      title: "Kompetencja najwyższej jakości",
-      desc: "Nasz zespół składa się z doświadczonych programistów, grafików, specjalistów ds. marketingu oraz project managerów. Wszystkie projekty realizujemy w oparciu o wiodące światowe wytyczne oraz w oparciu o aktualne trendy i kierunki rozwoju w zakresie programowania na zamówienie.",
+      img: "/home/partner/photo1.svg",
+      title:
+        "90% firm utrzymuje z nami stałą współpracę i jest to najlepszym dowodem, że wykonujemy swoją pracę dobrze",
+      desc: "Dzięki naszemu profesjonalizmowi oraz zaangażowaniu ponad 90% firm, z którymi współpracujemy, po zakończeniu projektu decyduje się na dalszy, wspólny rozwój oprogramowania lub wspólne tworzenie kolejnych rozwiązań.",
     },
     {
-      img: "/home/distinctions/distinctions2.svg",
-      title: "Wysoki standard za rozsądną cenę",
-      desc: "Dzięki dużemu doświadczeniu możemy sobie pozwolić na niższe koszty naszej pracy. Dzięki temu tworzone przez nas projekty są konkurencyjne cenowo w porównaniu do innych software house'ów, przy zachowaniu jeszcze wyższych standardów tworzenia dzięki kreatywności i wiedzy naszych programistów.",
+      img: "/home/partner/photo2.svg",
+      title:
+        "Dobre zrozumienie projektu wymaga Twojego mniejszego zaangażowania",
+      desc: "Wspólne warsztaty wstępne i dokładne mockupowanie (szkicowanie systemu) wraz ze stworzeniem specyfikacji, daje Tobie gwarancję, że rozumiemy Twój produkt bardzo dobrze i także zmniejszymy konieczność nawiązywania kontaktów w sprawach oczywistych w trakcie budowy systemu.",
     },
     {
-      img: "/home/distinctions/distinctions1.png",
-      title: "Wysoka niezawodność i dokładność",
-      desc: "Nie od dziś wiadomo, że polscy deweloperzy słyną z solidności i precyzji. To samo dotyczy wszystkich członków naszego zespołu - rzetelność i dokładność mamy w genach! A dzięki wsparciu profesjonalnych narzędzi, których używamy, tworzy mieszankę wysokiego standardu i niezachwianej jakości.",
+      img: "/home/partner/photo3.svg",
+      title: "Nie będziesz tracił czasu i nerwów na poprawki",
+      desc: "Stosujemy bardzo restrykcyjne narzędzia (Quality Tools), które wymagają od naszych zespołów deweloperskich tworzenia ultra czystego kodu. To gwarantuje, że nie stracisz nerwów związanych z poprawkami, a także, że oprogramowanie może być rozwijane bez ograniczeń przez nas lub kogokolwiek innego w przyszłości.",
+    },
+    {
+      img: "/home/partner/photo4.svg",
+      title:
+        "Jeden, dedykowany zespół dla Twojego projektu daje gwarancję, że system zostanie stworzony terminowo",
+      desc: "Za Twój projekt będzie odpowiedzialny jeden, stały zespół. Opiekun projektu cały czas będzie kontrolował i doradzał jak sprawić, m.in. aby system był nie tylko efektywny, ale i przyjazny użytkownikom, a zespół go tworzący będzie w 100% zaangażowany w projekt i nie będzie rozkojarzony innymi zadaniami.",
     },
   ];
   gsap.registerPlugin(ScrollTrigger);
@@ -39,32 +47,7 @@ export default function Distinctions() {
     //SHOW TILES
     TileRefs.current.forEach((el, index) => {
       ScrollTrigger.matchMedia({
-        "(min-width: 769px)": function () {
-          let tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: el,
-              scrub: true,
-              immediateRender: false,
-              start: `${(index + 1) * 2 + "0%"} 75%`,
-              end: "bottom 75%",
-            },
-          });
-          tl.set(el, { x: "0" });
-          tl.fromTo(
-            el,
-            {
-              y: "-=128",
-              opacity: 0,
-            },
-            {
-              y: "0",
-              opacity: 1,
-            }
-          );
-          tl.set(el, { y: "0" });
-        },
-
-        "(max-width: 768px)": function () {
+        "(min-width: 1px)": function () {
           let tl = gsap.timeline({
             stagger: 1,
             scrollTrigger: {
@@ -119,11 +102,7 @@ export default function Distinctions() {
   return (
     <Wrapper>
       <TextWrap ref={TitleRef}>
-        <Header
-          subtitle="SOLTIX Software House"
-          title="Dlaczego powinieneś wybrać nas?"
-          center
-        />
+        <Header subtitle="SOLTIX Software House" title={title} center />
       </TextWrap>
       <List ref={TilesRef}>
         {itemData.map((item, index) => (
@@ -151,7 +130,7 @@ const TextWrap = styled.div`
 const List = styled.div`
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
   }

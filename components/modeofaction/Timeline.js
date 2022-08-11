@@ -8,39 +8,55 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 export default function Timeline() {
   const TimeLineData = [
     {
-      title: "Wypełnij formularz",
-      desc: "Uzyskaj wstępny szacunek. Wypełnienie formularza zajmie Ci około 3 minut.",
-      img: "/modeofaction/timeline1.png",
+      title: "Uzupełnij formularz",
+      desc: "Potrzebujemy podstawowych informacje o firmie oraz wstępnego, opisu Twoich potrzeb, pomysłów lub opisu obszarów, które wymagają usprawnienia.",
+      img: "/modeofaction/img1.svg",
     },
     {
-      title: "My przygotujemy wstępną listę funkcji",
-      desc: "Przeanalizujemy Twoje potrzeby, wybierzemy optymalną technologię i wstępnie wycenimy projekt.",
-      img: "/modeofaction/timeline4.png",
+      title: "Ustalmy dogodny termin oraz miejsce spotkania",
+      desc: "Preferujemy osobiste spotkania w Twojej firmie jeśli znajduje się ona w woj. lubuskim, wielkopolskim, zachodniopomorskim, dolnośląskim lub blisko lotniska. Ale bądź spokojny, prowadzimy także warsztaty on-line.",
+      img: "/modeofaction/img2.svg",
     },
     {
-      title: "Spotkajmy się",
-      desc: "Preferujemy spotkania osobiste (w Twoim biurze lub u nas w Zielonej Górze) a także on-line. Przeprowadzimy warsztaty, które w pełni wyjaśniają nam Twoje potrzeby i wymagania.",
-      img: "/modeofaction/timeline5.png",
+      title: "Warsztaty czyli poznajemy Twoją firmę, potrzeby i pomysły",
+      desc: "Pierwsza część warsztatów to dla nas okazja, aby poznać obszary w których Twoja firma poszukuje wsparcia poprzez informatyzację, automatyzację lub digitalizację procesów. Jest to też czas dla nas abyśmy szerzej poznali Twój pomysł na aplikację webową lub mobilną. Na tym etapie przeanalizujemy także jakie rozwiązanie funkcjonalne będą najbardziej korzystne dla Ciebie.",
+      img: "/modeofaction/img3.svg",
     },
     {
-      title: "Ostateczna wycena i oferta",
-      desc: "Gdy poznamy wszystkie Twoje potrzeby, rozważymy możliwości i dobierzemy technologię by przedstawić ostateczną ofertę.",
-      img: "/modeofaction/timeline3.png",
+      title:
+        "Warsztaty czyli konkretyzujemy oprogramowanie (mockup’ujemy, rysujemy szkic)",
+      desc: "Po zebraniu wstępnych potrzeb zabieramy się za wspólne rysowanie (dosłownie!) aplikacji webowej lub mobilnej. Przechodzimy przez kolejne ekrany, widoki i rozrysowujemy jej funkcje. W końcowej fazie warsztatów będziemy w stanie także wstępnie oszacować koszty Twojego oprogramowania.",
+      img: "/modeofaction/img4.svg",
     },
     {
-      title: "Tworzenie oprogramowania",
-      desc: "Zmienimy Twoje potrzeby w idealne rozwiązanie IT. Pracujemy w frameworku Agile, zawsze testujemy kod by ostatecznie dostarczyć produkt najwyższej jakości.",
-      img: "/modeofaction/timeline2.png",
+      title: "Spis funkcjonalności",
+      desc: "Po spotkaniu, przeważnie w ciągu kilku dni, przygotowujemy wstępny spis funkcjonalności na podstawie zebranych informacji podczas warsztatów rozmów i rozrysowanego oprogramowania. Następnie spis funkcjonalności wysyłamy do Ciebie w celu weryfikacji i naniesienia ewentualnych dodatkowych poprawek lub uwag.",
+      img: "/modeofaction/img5.svg",
     },
     {
-      title: "Wdrożenie i szkolenie",
-      desc: "Gdy Twoje oprogramowanie będzie gotowe i w pełni przez Ciebie zaakceptowane, wdrożymy je na wybranym serwerze i przeszkolimy Twój zespół.",
-      img: "/modeofaction/timeline5.png",
+      title: "Estymacja i ponowne spotkanie",
+      desc: "Posiadając gotowy spis funkcjonalności przystępujemy do estymowania całego projektu. Szacujemy przede wszystkim czas jaki nasz software house będzie potrzebował, aby stworzyć oprogramowanie. Oszacowanie czasu umożliwi nam oszacowanie kosztów projektu. Efekty estymacji przedstawiamy Tobie podczas spotkania, gdzie podsumowujemy funkcjonalności, założenia, terminy i kroki milowe oraz koszty.",
+      img: "/modeofaction/img6.svg",
     },
     {
-      title: "Wsparcie i utrzymanie",
-      desc: "Korzystamy z globalnych znanych technologii. Nasz kod może być dalej rozwijany przez każdego w dowolnym momencie. Jednak zawsze zapewniamy co najmniej 12-miesięczne wsparcie.",
-      img: "/modeofaction/timeline1.png",
+      title: "Projektowanie graficzne",
+      desc: "Po Twojej akceptacji i podpisaniu umowy zabieramy się za projektowanie graficzne. Specjaliści zajmą się nie tylko odpowiednią oprawą graficzną Twojej aplikacji webowej lub mobilnej, ale także przypilnują, aby Twój system był przyjazny i efektywny dla użytkowników (UX).",
+      img: "/modeofaction/img7.svg",
+    },
+    {
+      title: "Programowanie",
+      desc: "Programowanie będzie bez wątpienia najdłuższym etapem. Przynajmniej raz w tygodniu otrzymasz od nas update wykonanych przez nas prac oraz dalszych kroków realizacji oprogramowania. Każda funkcjonalność jest przez nas dokładnie testowana zanim zostanie przekazana do Twojej weryfikacji.",
+      img: "/modeofaction/img8.svg",
+    },
+    {
+      title: "Publikacja aplikacji webowej lub mobilnej",
+      desc: "Po Twojej weryfikacji całego oprogramowania na naszych serwerach roboczych i akceptacji poprawności, aplikacja zostanie przeniesiona na Twój docelowy serwer lub opublikowana w sklepach Google Play i AppStore.",
+      img: "/modeofaction/img9.svg",
+    },
+    {
+      title: "Rozwijamy, wspieramy",
+      desc: "Tworzymy oprogramowanie tak aby gotowe rozwiązanie móc dalej rozwijać, ulepszać zgodnie z Twoimi potrzebami. Na działanie systemu udzielamy także 24 miesięcznej gwarancji. Możemy także prowadzić dla Ciebie ciągły support.",
+      img: "/modeofaction/img10.svg",
     },
   ];
   gsap.registerPlugin(ScrollTrigger);

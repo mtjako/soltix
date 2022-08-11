@@ -9,6 +9,7 @@ import Tools from "../components/modeofaction/Tools";
 import Header from "../components/layout/Header";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
+import CTASection from "../components/home/CTASection";
 
 export default function ModeOfAction() {
   const TitleRef = useRef(null);
@@ -50,7 +51,10 @@ export default function ModeOfAction() {
     <>
       <Head>
         <title>Soltix - Sposób działania</title>
-        <meta name="description" content="Software House SOLTIX | Tworzymy Dedykowane Oprogramowanie na Zamówienie. Systemy ERP, CRM, DMS, E-commerce | Poproś o darmową wycenę!" />
+        <meta
+          name="description"
+          content="Software House SOLTIX | Tworzymy Dedykowane Oprogramowanie na Zamówienie. Systemy ERP, CRM, DMS, E-commerce | Poproś o darmową wycenę!"
+        />
         <link rel="icon" href="logo/favicon.ico" />
       </Head>
       <Navigation />
@@ -63,13 +67,10 @@ export default function ModeOfAction() {
               center
             />
           </div>
-          <p ref={TextRef}>
-          </p>
+          <p ref={TextRef}></p>
         </TopText>
       </Wrapper>
       <Timeline />
-      <ResponsiveFrame />
-      <Tools />
       <Footer />
     </>
   );

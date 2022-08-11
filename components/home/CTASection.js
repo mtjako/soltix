@@ -83,16 +83,23 @@ export default function CTASection() {
             width={500}
             height={500}
             objectFit="contain"
-            src="/home/contact/process2.svg"
+            src="/home/contact/process.svg"
             alt="contact"
           />
         </div>
         <div ref={TitleRef} className="box">
-          <h2>Porozmawiajmy o oprogramowaniu dla Twojej firmy.</h2>
+          <h3>
+            Wiesz, że w Twojej firmie potrzebna jest automatyzacja /
+            digitalizacja, ale&nbsp;nie wiesz jak za to się zabrać?
+          </h3>
+          <h2>
+            Software House'y oczekują od Ciebie specyfikacji, ale nie wiesz jak
+            ją stworzyć lub nie masz na to czasu?
+          </h2>
           <p>
-            W trakcie godzinnych warsztatów pomożemy Ci znacznie łatwiej przejść
-            przez proces digitalizacji określonych obszarów w firmie i dodatkowo
-            poznasz nasze kompetencje.
+            Jesteśmy po to, aby ułatwić Tobie ten proces. Scharakteryzować
+            potrzeby, zaprojektować funkcjonalności i specyfikację Twojego
+            oprogramowania.
           </p>
         </div>
         <div ref={BtnRef}>

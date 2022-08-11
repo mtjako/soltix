@@ -8,7 +8,7 @@ import { TextPlugin } from "gsap/dist/TextPlugin";
 import { EasePack } from "gsap/dist/EasePack";
 import Link from "next/link";
 
-export default function Hero() {
+export default function Hero({ title, subtitle, main }) {
   const HeroManRef = useRef();
   const HeroRef = useRef();
   const TitleRef = useRef();
@@ -60,31 +60,50 @@ export default function Hero() {
     );
     gsap.set(HeroDescRef.current, { x: "0" });
     //CURSOR TYPING
-    const words = ["cyfrowe", "wygodne", "zaawansowane"]
-    let cursor = gsap.to('.cursor', {opacity:0, ease: "power2.inOut", repeat:-1})
-    let masterTl = gsap.timeline({repeat: -1}).pause()
+    const words = [
+      "firmie produkcyjnej",
+      "firmie transportowej",
+      "magazynie",
+      "kancelarii prawnej",
+      "sklepu internetowego",
+      "działu HR",
+      "firmie usługowej",
+    ];
+    let cursor = gsap.to(".cursor", {
+      opacity: 0,
+      ease: "power2.inOut",
+      repeat: -1,
+    });
+    let masterTl = gsap.timeline({ repeat: -1 }).pause();
     masterTl.play();
-    words.forEach(word => {
-      let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 2})
-      tl.to('.text', {duration: 1, text: word})
-      masterTl.add(tl)
-    })
+    words.forEach((word) => {
+      let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 2 });
+      tl.to(".text", { duration: 1, text: word });
+      masterTl.add(tl);
+    });
   }, []);
 
   return (
     <HeroWrap ref={HeroRef}>
       <HeroText>
         <div ref={TitleRef}>
-          <p className="subtitle">We Make IT Soft...</p>
-          <h1>Tworzymy oprogramowanie na zamówienie “szyte na miarę”</h1>
+          <p className="subtitle">{subtitle}</p>
+          <h1>{title}</h1>
         </div>
-        <p ref={HeroDescRef} className="desc">
-        Zmieniamy analogowe potrzeby<br/> na <span className="text"></span><span className="cursor">|</span> rozwiązania.
-        </p>
+        {main && (
+          <p ref={HeroDescRef} className="desc">
+            Usprawniamy procesy w:&nbsp;
+            <span className="text"></span>
+            <span className="cursor">|</span>
+          </p>
+        )}
         <Link href="/contact">
           <div>
-            <Btn>ZAMÓW WYCENĘ</Btn>
+            <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
           </div>
+        </Link>
+        <Link href="/contact">
+          <InfoText>Jak wyglądają warsztaty?</InfoText>
         </Link>
       </HeroText>
       <HeroImg>
@@ -120,13 +139,24 @@ export default function Hero() {
   );
 }
 
+const InfoText = styled.div`
+  color: #737373;
+  margin-top: 8px;
+  cursor: pointer;
+  border-bottom: 1.5px solid #aaa;
+  width: max-content;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+`;
+
 const HeroWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   @media (max-width: 750px) {
     grid-template-columns: repeat(1, 1fr);
   }
-  min-height: 600px;
+  min-height: calc(100vh - 72px);
   align-items: center;
   max-width: 1140px;
   margin: 0 auto 100px;
@@ -152,8 +182,7 @@ const HeroText = styled.div`
   }
   h1 {
     font-weight: 700;
-    font-size: 39px;
-    line-height: 49px;
+    font-size: 28px;
     margin: 8px 0;
     color: ${(props) => props.theme.neutral900};
     @media (max-width: 1160px) {
