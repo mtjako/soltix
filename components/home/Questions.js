@@ -34,6 +34,8 @@ export default function Questions({ data }) {
 
   useEffect(() => {
     QuestionWrapRefs.current.forEach((el, index) => {
+      ScrollTrigger.matchMedia({
+        "(min-width: 769px)": function () {
       //IMAGE SHOW
       gsap.fromTo(
         QuestionLeftRefs.current[index],
@@ -74,6 +76,7 @@ export default function Questions({ data }) {
         }
       );
       gsap.set(QuestionRightRefs.current[index], { x: "0" });
+    }});
     });
   }, []);
   return (
@@ -96,10 +99,20 @@ export default function Questions({ data }) {
 const Section = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+  & > img {
+    width: 100%;
+  }
   align-items: center;
   column-gap: 64px;
+  margin-bottom: 40px;
   & > div:first-child {
-    order: ${(props) => (props.even ? 0 : 1)};
+    margin: 0 auto;
+    @media (min-width: 769px) {
+      order: ${(props) => (props.even ? 0 : 1)};
+    }
   }
   h2 {
     font-size: 30px;

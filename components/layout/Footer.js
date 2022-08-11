@@ -23,10 +23,7 @@ export default function Footer() {
               <Link href="/">Strona Główna</Link>
             </li>
             <li>
-              <Link href="/dedicatedsoftware">Oprogramowanie dedykowane</Link>
-            </li>
-            <li>
-              <Link href="/modeofaction">Sposób działania</Link>
+              <Link href="/modeofaction">Jak wyglądają darmowe warsztaty?</Link>
             </li>
             <li>
               <Link href="/contact">Kontakt</Link>

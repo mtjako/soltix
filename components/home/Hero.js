@@ -148,6 +148,9 @@ const InfoText = styled.div`
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
+  @media (max-width: 750px) {
+    margin: 8px auto 0;
+  }
 `;
 
 const HeroWrap = styled.div`
@@ -188,6 +191,10 @@ const HeroText = styled.div`
     @media (max-width: 1160px) {
       font-size: 40px;
       line-height: 50px;
+    }
+    @media (max-width: 750px) {
+      font-size: 24px;
+      line-height: normal;
     }
     span {
       color: ${(props) => props.theme.blue700};

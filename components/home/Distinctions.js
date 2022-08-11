@@ -47,7 +47,7 @@ export default function Distinctions({ title }) {
     //SHOW TILES
     TileRefs.current.forEach((el, index) => {
       ScrollTrigger.matchMedia({
-        "(min-width: 1px)": function () {
+        "(min-width: 769px)": function () {
           let tl = gsap.timeline({
             stagger: 1,
             scrollTrigger: {

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -81,7 +81,7 @@ export default function Navigation() {
           <FontAwesomeIcon icon={faBars} className="icon" />
         </HamburgerIcon>
         <HamburgerMenu className={isOpen ? "active" : ""}>
-          <Link href="/dedicatedsoftware" passHref>
+          <Link href="/modeofaction" passHref>
             <HamburgerMenuItem>
               Jak wyglądają darmowe warsztaty?
             </HamburgerMenuItem>
@@ -138,16 +138,32 @@ export default function Navigation() {
   );
 }
 
+const show = keyframes`
+  from {
+    opacity: 0;
+    top: 0;
+  }
+
+  to {
+    opacity: 1;
+  top: 48px;
+  }
+`;
+
 const Dropdown = styled.div`
+  background-color: #fff;
   width: max-content;
   position: absolute;
   top: 48px;
   left: 0;
   width: 100%;
   box-shadow: 0px 7px 20px 0px rgb(42 22 139 / 8%);
+  animation: ${show} .25s ease-in-out;
+
 `;
+
+
 const DropdownItem = styled.div`
-  background-color: #fff;
   padding: 10px 20px;
   cursor: pointer;
   &:hover {

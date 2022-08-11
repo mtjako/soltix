@@ -72,6 +72,8 @@ export default function Timeline() {
   useEffect(() => {
     //SHOW TILES
     TileRefs.current.forEach((el, index) => {
+      ScrollTrigger.matchMedia({
+        "(min-width: 769px)": function () {
       if (index !== 0) {
         gsap.fromTo(
           el.children[0],
@@ -147,6 +149,7 @@ export default function Timeline() {
         );
         gsap.set(el.children[1], { x: "0" });
       }
+    }});
     });
   }, []);
   return (
