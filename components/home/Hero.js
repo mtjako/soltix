@@ -140,6 +140,7 @@ export default function Hero({ title, subtitle, main }) {
 }
 
 const InfoText = styled.div`
+margin: 25%;
   color: #737373;
   margin-top: 8px;
   cursor: pointer;

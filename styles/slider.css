@@ -1,0 +1,56 @@
+/* @import "../_variables.scss";
+
+.logos {
+  padding: 80px 0;
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 48px;
+  }
+}
+.tiles {
+  display: flex;
+  overflow-x: scroll;
+  &Wrap {
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(250, 250, 249, 1) 0%,
+        rgba(250, 250, 249, 0) 25%,
+        rgba(250, 250, 249, 0) 75%,
+        rgba(250, 250, 249, 1) 100%
+      );
+    }
+  }
+
+  &::-moz-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &Tile {
+    min-width: 200px;
+    width: 200px;
+    height: 56px;
+
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 32px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+} */

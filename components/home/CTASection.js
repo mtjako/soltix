@@ -89,7 +89,7 @@ export default function CTASection({title}) {
         </div>
         <div ref={TitleRef} className="box">
           <h3>
-            {title ? title : "Wiesz, że w Twojej firmie potrzebna jest automatyzacja / digitalizacja, ale&nbsp;nie wiesz jak za to się zabrać?"}
+            {title ? title : "Wiesz, że w Twojej firmie potrzebna jest automatyzacja / digitalizacja, ale nie wiesz jak za to się zabrać?"}
           </h3>
           <h2>
             Software House'y oczekują od Ciebie specyfikacji, ale nie wiesz jak

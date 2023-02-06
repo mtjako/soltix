@@ -4,6 +4,8 @@ import Wrapper from "../layout/Wrapper";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
+import Btn from "../layout/Btn";
 
 export default function Timeline() {
   const TimeLineData = [
@@ -162,6 +164,11 @@ export default function Timeline() {
               <div className="text">
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
+                <Link href="/contact">
+          <div>
+            <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
+          </div>
+        </Link>
               </div>
             </TimelineItem>
             <TimelineImg>

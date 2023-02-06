@@ -7,7 +7,6 @@ import Distinctions from "../components/home/Distinctions";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
 import Questions from "../components/home/Questions";
-import Team from "../components/home/Team";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
@@ -49,7 +48,6 @@ export default function Home() {
       <Questions data={data} />
       <CTASection />
       <BuildForYou />
-      <Team />
       <Features />
       <Contact />
       <Footer />

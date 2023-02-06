@@ -4,7 +4,6 @@ import CTASection from "../components/home/CTASection";
 import Distinctions from "../components/home/Distinctions";
 import Hero from "../components/home/Hero";
 import Questions from "../components/home/Questions";
-import Team from "../components/home/Team";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
@@ -52,7 +51,6 @@ export default function Home() {
       <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla firm transportowych i spedycyjnych?" />
       <Questions data={data} />
       <CTASection />
-      <Team />
       <Contact />
       <Footer />
     </div>
