@@ -89,7 +89,7 @@ export default function Tools() {
             <Tech>
               <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
                 <Image
-                  src={"/modeofaction/vue.svg"}
+                  src={"/modeofaction/tech1.svg"}
                   width={64}
                   height={64}
                   alt="VueJS"
@@ -99,7 +99,7 @@ export default function Tools() {
             <Tech>
               <a href="https://nuxtjs.org/" target="_blank" rel="noreferrer">
                 <Image
-                  src={"/modeofaction/nuxt.svg"}
+                  src={"/modeofaction/tech2.svg"}
                   width={64}
                   height={64}
                   alt="NuxtJS"
@@ -109,7 +109,7 @@ export default function Tools() {
             <Tech>
               <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
                 <Image
-                  src={"/modeofaction/react.svg"}
+                  src={"/modeofaction/tech3.svg"}
                   width={64}
                   height={64}
                   alt="ReactJS"
@@ -119,7 +119,7 @@ export default function Tools() {
             <Tech>
               <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
                 <Image
-                  src={"/modeofaction/nextjs.svg"}
+                  src={"/modeofaction/tech4.svg"}
                   width={64}
                   height={64}
                   alt="NextJS"
@@ -133,7 +133,7 @@ export default function Tools() {
                 rel="noreferrer"
               >
                 <Image
-                  src={"/modeofaction/tailwind.svg"}
+                  src={"/modeofaction/tech5.svg"}
                   width={64}
                   height={64}
                   alt="TailwindCSS"
@@ -143,7 +143,7 @@ export default function Tools() {
             <Tech>
               <a href="https://quasar.dev/" target="_blank" rel="noreferrer">
                 <Image
-                  src={"/modeofaction/quasar.svg"}
+                  src={"/modeofaction/tech6.svg"}
                   width={64}
                   height={64}
                   alt="Quasar"
@@ -154,7 +154,7 @@ export default function Tools() {
             <Tech>
               <a href="https://laravel.com/" target="_blank" rel="noreferrer">
                 <Image
-                  src={"/modeofaction/laravel.svg"}
+                  src={"/modeofaction/tech7.svg"}
                   width={64}
                   height={64}
                   alt="Laravel"
@@ -164,7 +164,7 @@ export default function Tools() {
             <Tech>
               <a href="https://symfony.com/" target="_blank" rel="noreferrer">
                 <Image
-                  src={"/modeofaction/symfony.svg"}
+                  src={"/modeofaction/tech8.svg"}
                   width={64}
                   height={64}
                   alt="Symfony"

@@ -11,6 +11,7 @@ import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
+import { Techs } from "../components/home/TechSlider";
 
 const data = [
   {
@@ -53,6 +54,7 @@ export default function Home() {
       <BuildForYou />
       <Features />
       <Contact />
+      <Techs />
       <Footer />
     </div>
   );
