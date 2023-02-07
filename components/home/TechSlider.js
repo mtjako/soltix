@@ -31,7 +31,7 @@ export const Techs = () => {
   return (
     <XD>
       <div className={"techs"}>
-        <h2>Technologie z którymi pracujemy</h2>
+        <h2>Technologie, z którymi pracujemy:</h2>
         <div className={"tilesWrap"}>
           <div className={"tiles"} ref={logsDiv}>
             {[...techs, ...techs].map((tech, index) => (

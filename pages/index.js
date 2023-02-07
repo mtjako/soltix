@@ -46,7 +46,6 @@ export default function Home() {
         subtitle="SOLTIX SOFTWARE HOUSE"
         main
       />
-      <Logos />
       <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla B2B?" />
       <Logos />
       <Questions data={data} />
