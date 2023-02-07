@@ -13,6 +13,11 @@ export default function Timeline() {
       title: "Uzupełnij formularz",
       desc: "Potrzebujemy podstawowych informacje o firmie oraz wstępnego, opisu Twoich potrzeb, pomysłów lub opisu obszarów, które wymagają usprawnienia.",
       img: "/modeofaction/img1.svg",
+      button: <Link href="/contact">
+      <div>
+        <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
+      </div>
+    </Link>
     },
     {
       title: "Ustalmy dogodny termin oraz miejsce spotkania",
@@ -164,11 +169,7 @@ export default function Timeline() {
               <div className="text">
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
-                <Link href="/contact">
-          <div>
-            <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
-          </div>
-        </Link>
+                {item.button}
               </div>
             </TimelineItem>
             <TimelineImg>

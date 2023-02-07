@@ -6,6 +6,7 @@ import CTASection from "../components/home/CTASection";
 import Distinctions from "../components/home/Distinctions";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
+import { Logos } from "../components/home/Logos";
 import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
@@ -44,6 +45,7 @@ export default function Home() {
         subtitle="SOLTIX SOFTWARE HOUSE"
         main
       />
+      <Logos />
       <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla B2B?" />
       <Questions data={data} />
       <CTASection />
