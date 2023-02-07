@@ -47,6 +47,7 @@ export default function Home() {
       />
       <Logos />
       <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla B2B?" />
+      <Logos />
       <Questions data={data} />
       <CTASection />
       <BuildForYou />
