@@ -31,7 +31,7 @@ export const Techs = () => {
   return (
     <XD>
       <div className={"techs"}>
-        <h2>Naprawiamy sprzęt marek</h2>
+        <h2>Technologie z którymi pracujemy</h2>
         <div className={"tilesWrap"}>
           <div className={"tiles"} ref={logsDiv}>
             {[...techs, ...techs].map((tech, index) => (
@@ -56,6 +56,7 @@ export const Techs = () => {
 const XD = styled.div`
   .techs {
     padding: 80px 0;
+    filter: grayscale(1);
   }
   .techs h2 {
     font-weight: 700;

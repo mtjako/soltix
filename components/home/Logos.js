@@ -31,7 +31,7 @@ export const Logos = () => {
   return (
     <XD>
       <div className={"logos"}>
-        <h2>Naprawiamy sprzęt marek</h2>
+        <h2>Zaufali nam</h2>
         <div className={"tilesWrap"}>
           <div className={"tiles"} ref={logsDiv}>
             {[...logos, ...logos].map((logo, index) => (
