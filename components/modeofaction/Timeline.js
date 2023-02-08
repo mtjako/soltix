@@ -15,7 +15,7 @@ export default function Timeline() {
       img: "/modeofaction/img1.svg",
       button: <Link href="/contact">
       <div>
-        <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
+        <Btn>UMÓW DARMOWE, PÓŁTORAGODZINNE WARSZTATY</Btn>
       </div>
     </Link>
     },

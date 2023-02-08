@@ -92,14 +92,14 @@ export default function Hero({ title, subtitle, main }) {
         </div>
         {main && (
           <p ref={HeroDescRef} className="desc">
-            Usprawniamy procesy w:&nbsp;
+            Usprawniamy procesy w&nbsp;
             <span className="text"></span>
             <span className="cursor">|</span>
           </p>
         )}
         <Link href="/contact">
           <div>
-            <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
+            <Btn>UMÓW DARMOWE, PÓŁTORAGODZINNE WARSZTATY</Btn>
           </div>
         </Link>
         <Link href="/modeofaction">
@@ -184,6 +184,9 @@ const HeroText = styled.div`
     text-transform: uppercase;
     color: ${(props) => props.theme.blue600};
   }
+  .text {
+    @media (max-width: 750px) {
+display:block;  }
   h1 {
     font-weight: 700;
     font-size: 28px;

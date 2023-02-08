@@ -11,24 +11,24 @@ export default function Distinctions({ title }) {
     {
       img: "/home/partner/photo1.svg",
       title:
-        "90% firm utrzymuje z nami stałą współpracę i jest to najlepszym dowodem, że wykonujemy swoją pracę dobrze",
+        "Ponad 90% firm utrzymuje z nami stałą współpracę - jest to dowód, że wykonujemy swoją pracę dobrze",
       desc: "Dzięki naszemu profesjonalizmowi oraz zaangażowaniu ponad 90% firm, z którymi współpracujemy, po zakończeniu projektu decyduje się na dalszy, wspólny rozwój oprogramowania lub wspólne tworzenie kolejnych rozwiązań.",
     },
     {
       img: "/home/partner/photo2.svg",
       title:
-        "Dobre zrozumienie projektu wymaga Twojego mniejszego zaangażowania",
-      desc: "Wspólne warsztaty wstępne i dokładne mockupowanie (szkicowanie systemu) wraz ze stworzeniem specyfikacji, daje Tobie gwarancję, że rozumiemy Twój produkt bardzo dobrze i także zmniejszymy konieczność nawiązywania kontaktów w sprawach oczywistych w trakcie budowy systemu.",
+        "Nasza umiejętność zrozumienia Twoich oczekiwań i wymagań zagwarantuje Tobie mniejsze zaangażowanie w proces tworzenia",
+      desc: "Wspólne warsztaty i wstępne szkicowanie systemu by stworzyć dokładną specyfikację, daje Tobie gwarancję, że bardzo dobrze rozumiemy Twoje wymagania, co zmniejszy konieczność kontaktu w trakcie budowy systemu.",
     },
     {
       img: "/home/partner/photo3.svg",
-      title: "Nie będziesz tracił czasu i nerwów na poprawki",
+      title: "Współpracując z nami nie będziesz musiał tracić czasu i nerwów na niekończące się poprawki",
       desc: "Stosujemy bardzo restrykcyjne narzędzia (Quality Tools), które wymagają od naszych zespołów deweloperskich tworzenia ultra czystego kodu. To gwarantuje, że nie stracisz nerwów związanych z poprawkami, a także, że oprogramowanie może być rozwijane bez ograniczeń przez nas lub kogokolwiek innego w przyszłości.",
     },
     {
       img: "/home/partner/photo4.svg",
       title:
-        "Jeden, dedykowany zespół dla Twojego projektu daje gwarancję, że system zostanie stworzony terminowo",
+        "Dedykowany zespół dla Twojego projektu da gwarancję, że system zostanie stworzony terminowo",
       desc: "Za Twój projekt będzie odpowiedzialny jeden, stały zespół. Opiekun projektu cały czas będzie kontrolował i doradzał jak sprawić, m.in. aby system był nie tylko efektywny, ale i przyjazny użytkownikom, a zespół go tworzący będzie w 100% zaangażowany w projekt i nie będzie rozkojarzony innymi zadaniami.",
     },
   ];

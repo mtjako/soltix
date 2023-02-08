@@ -89,22 +89,20 @@ export default function CTASection({title}) {
         </div>
         <div ref={TitleRef} className="box">
           <h3>
-            {title ? title : "Wiesz, że w Twojej firmie potrzebna jest automatyzacja / digitalizacja, ale nie wiesz jak za to się zabrać?"}
+            {title ? title : "Czujesz, że w Twojej firmie potrzebna jest automatyzacja i digitalizacja procesów, ale nie wiesz jak za to się zabrać?"}
           </h3>
           <h2>
-            Software House'y oczekują od Ciebie specyfikacji, ale nie wiesz jak
-            ją stworzyć lub nie masz na to czasu?
+          Firmy tworzące oprogramowanie oczekują od Ciebie specyfikacji, ale nie wiesz jak ją stworzyć lub nie masz na to czasu?
           </h2>
           <p>
-            Jesteśmy po to, aby ułatwić Tobie ten proces. Scharakteryzować
-            potrzeby, zaprojektować funkcjonalności i specyfikację Twojego
-            oprogramowania.
+          Jesteśmy po to, aby ułatwić Tobie cały ten proces! Wspólnie określimy potrzeby, zaproponujemy możliwe funkcjonalności i stworzymy specyfikację wymagań Twojego oprogramowania.
+
           </p>
         </div>
         <div ref={BtnRef}>
           <Link href="/contact">
             <div>
-              <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
+              <Btn>UMÓW DARMOWE, PÓŁTORAGODZINNE WARSZTATY</Btn>
             </div>
           </Link>
           <Link href="/modeofaction">
