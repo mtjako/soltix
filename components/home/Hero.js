@@ -93,6 +93,7 @@ export default function Hero({ title, subtitle, main }) {
         {main && (
           <p ref={HeroDescRef} className="desc">
             Usprawniamy procesy w&nbsp;
+            <br className="break"></br>
             <span className="text"></span>
             <span className="cursor">|</span>
           </p>
@@ -184,9 +185,9 @@ const HeroText = styled.div`
     text-transform: uppercase;
     color: ${(props) => props.theme.blue600};
   }
-  .text {
-    @media (max-width: 750px) {
-display:block;  }
+  .break {
+    @media (min-width: 750px) {
+display:none;  }
   h1 {
     font-weight: 700;
     font-size: 28px;
