@@ -78,16 +78,16 @@ export default function CTASection({title}) {
   return (
     <Wrapper>
       <ContactWrapper>
-        <div ref={ImgRef}>
-          <Image
+        {/* <div ref={ImgRef}> */}
+          {/* <Image
             width={500}
             height={500}
             objectFit="contain"
             src="/home/contact/process.svg"
             alt="contact"
           />
-        </div>
-        <div ref={TitleRef} className="box">
+        </div> */}
+        {/* <div ref={TitleRef} className="box">
           <h3>
             {title ? title : "Czujesz, że w Twojej firmie potrzebna jest automatyzacja i digitalizacja procesów, ale nie wiesz jak za to się zabrać?"}
           </h3>
@@ -98,11 +98,11 @@ export default function CTASection({title}) {
           Jesteśmy po to, aby ułatwić Tobie cały ten proces! Wspólnie określimy potrzeby, zaproponujemy możliwe funkcjonalności i stworzymy specyfikację wymagań Twojego oprogramowania.
 
           </p>
-        </div>
+        </div> */}
         <div ref={BtnRef}>
           <Link href="/contact">
             <div>
-              <Btn>UMÓW DARMOWE, PÓŁTORAGODZINNE WARSZTATY</Btn>
+              <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
             </div>
           </Link>
           <Link href="/modeofaction">

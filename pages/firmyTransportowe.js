@@ -15,7 +15,7 @@ const data = [
   },
   {
     title:
-      "Wciąż dużo procesów w Twojej firmie produkcyjnej przetwarzanych jest na kartkach, różnych dokumentach lub w plikach excel?",
+      "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
     text: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
     image: "/home/questions/photo3.svg",
   },

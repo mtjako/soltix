@@ -9,27 +9,21 @@ import Header from "../layout/Header";
 export default function Distinctions({ title }) {
   const itemData = [
     {
-      img: "/home/partner/photo1.svg",
+      img: "/home/questions/photo.svg",
       title:
-        "Ponad 90% firm utrzymuje z nami stałą współpracę - jest to dowód, że wykonujemy swoją pracę dobrze",
-      desc: "Dzięki naszemu profesjonalizmowi oraz zaangażowaniu ponad 90% firm, z którymi współpracujemy, po zakończeniu projektu decyduje się na dalszy, wspólny rozwój oprogramowania lub wspólne tworzenie kolejnych rozwiązań.",
+        "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
+      desc: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
     },
     {
-      img: "/home/partner/photo2.svg",
+      img: "/home/questions/photo2.svg",
       title:
-        "Nasza umiejętność zrozumienia Twoich oczekiwań i wymagań zagwarantuje Tobie mniejsze zaangażowanie w proces tworzenia",
-      desc: "Wspólne warsztaty i wstępne szkicowanie systemu by stworzyć dokładną specyfikację, daje Tobie gwarancję, że bardzo dobrze rozumiemy Twoje wymagania, co zmniejszy konieczność kontaktu w trakcie budowy systemu.",
+        "Chciałbyś umożliwić dostęp do aplikacji swoim klientom?",
+      desc: "Twoi klienci będą mogli zalogować się do dedykowanego panelu poprzez aplikację webową lub mobilną i łatwo dostarczać lub sprawdzić informacje, które Twoja firma im udostępni. Dzięki temu Twoi kontrahenci będą mieli dostęp np. do dokumentów czy formularzy. Będą mogli śledzić statystyki wykonywanych zadań oraz być w stałym kontakcie z Twoimi pracownikami.",
     },
     {
-      img: "/home/partner/photo3.svg",
-      title: "Współpracując z nami nie będziesz musiał tracić czasu i nerwów na niekończące się poprawki",
-      desc: "Stosujemy bardzo restrykcyjne narzędzia (Quality Tools), które wymagają od naszych zespołów deweloperskich tworzenia ultra czystego kodu. To gwarantuje, że nie stracisz nerwów związanych z poprawkami, a także, że oprogramowanie może być rozwijane bez ograniczeń przez nas lub kogokolwiek innego w przyszłości.",
-    },
-    {
-      img: "/home/partner/photo4.svg",
-      title:
-        "Dedykowany zespół dla Twojego projektu da gwarancję, że system zostanie stworzony terminowo",
-      desc: "Za Twój projekt będzie odpowiedzialny jeden, stały zespół. Opiekun projektu cały czas będzie kontrolował i doradzał jak sprawić, m.in. aby system był nie tylko efektywny, ale i przyjazny użytkownikom, a zespół go tworzący będzie w 100% zaangażowany w projekt i nie będzie rozkojarzony innymi zadaniami.",
+      img: "/home/contact/process.svg",
+      title: "Czujesz, że w Twojej firmie potrzebna jest automatyzacja i digitalizacja procesów, ale nie wiesz jak za to się zabrać?",
+      desc: "Jesteśmy po to, aby ułatwić Tobie cały ten proces! Wspólnie określimy potrzeby, zaproponujemy możliwe funkcjonalności i stworzymy specyfikację wymagań Twojego oprogramowania.",
     },
   ];
   gsap.registerPlugin(ScrollTrigger);

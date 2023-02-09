@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-const techs = ["", "", "", "", "", "", "", "", "", ""];
+const techs = [{name:"Vue"},{name:"Nuxt"},{name:"React"},{name:"Next"},{name:"Tailwind"},{name:"Quasar"},{name:"Laravel"},{name:"Symfony"}];
 export const Techs = () => {
   const logsDiv = useRef(null);
   const [atEnd, setAtEnd] = useState(false);
@@ -44,6 +44,7 @@ export const Techs = () => {
                   height={56}
                   alt=""
                 />
+                <p className="name">{tech.name}</p>
               </div>
             ))}
           </div>
@@ -54,6 +55,9 @@ export const Techs = () => {
 };
 
 const XD = styled.div`
+.name {
+  font-size:20px;
+}
   .techs {
     padding: 80px 0;
     filter: grayscale(1);
@@ -66,7 +70,7 @@ const XD = styled.div`
   }
   .tiles {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
   }
   .tiles::-moz-scrollbar {
     display: none;
