@@ -4,15 +4,14 @@ import CTASection from "../components/home/CTASection";
 import Distinctions from "../components/home/Distinctions";
 import Hero from "../components/home/Hero";
 import Questions from "../components/home/Questions";
-import Team from "../components/home/Team";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
 const data = [
   {
     title:
-      "Wciąż dużo procesów w Twojej firmie produkcyjnej przetwarzanych jest na kartkach, różnych dokumentach lub w plikach excel?",
-    text: "Przenieśmy procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo uzupełni niezbędne dane (np. raporty pracy, umowy z klientami, formularze). Wszystko będzie zebrane w chmurze i łatwo dostępne. A kadra zarządcza będzie miała możliwość większej kontroli przepływu procesów.",
+      "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
+    text: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
     image: "/home/questions/photo.svg",
   },
   {
@@ -47,7 +46,6 @@ export default function Home() {
       <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla firm produkcyjnych?" />
       <Questions data={data} />
       <CTASection />
-      <Team />
       <Contact />
       <Footer />
     </div>

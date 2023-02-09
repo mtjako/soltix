@@ -21,7 +21,7 @@ export default function Navigation() {
             <MenuItem>Jak wyglądają darmowe warsztaty?</MenuItem>
           </Link>
           <DropdownBtn>
-            <MenuItem onClick={() => setDropdownOpen(!dropdownOpen)}>
+            <MenuItem onMouseEnter={() => setDropdownOpen(!dropdownOpen)}>
               <p>Jak usprawnimy działanie</p>
               <Image
                 src="/home/hero/chevron.svg"
@@ -31,7 +31,7 @@ export default function Navigation() {
               />
             </MenuItem>
             {dropdownOpen && (
-              <Dropdown>
+              <Dropdown onMouseLeave={() => setDropdownOpen(false)}>
                 <Link href="/firmyProdukcyjne">
                   <DropdownItem onClick={() => setDropdownOpen(false)}>
                     Firmy produkcyjnej
@@ -138,18 +138,6 @@ export default function Navigation() {
   );
 }
 
-const show = keyframes`
-  from {
-    opacity: 0;
-    top: 0;
-  }
-
-  to {
-    opacity: 1;
-  top: 48px;
-  }
-`;
-
 const Dropdown = styled.div`
   background-color: #fff;
   width: max-content;
@@ -158,8 +146,6 @@ const Dropdown = styled.div`
   left: 0;
   width: 100%;
   box-shadow: 0px 7px 20px 0px rgb(42 22 139 / 8%);
-  animation: ${show} .25s ease-in-out;
-
 `;
 
 

@@ -98,7 +98,7 @@ export default function CTASection() {
         <div ref={BtnRef}>
           <Link href="/contact">
             <div>
-              <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
+              <Btn>UMÓW DARMOWE, PÓŁTORAGODZINNE WARSZTATY</Btn>
             </div>
           </Link>
           <Link href="/modeofaction">

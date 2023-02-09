@@ -4,6 +4,8 @@ import Wrapper from "../layout/Wrapper";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
+import Btn from "../layout/Btn";
 
 export default function Timeline() {
   const TimeLineData = [
@@ -11,6 +13,11 @@ export default function Timeline() {
       title: "Uzupełnij formularz",
       desc: "Potrzebujemy podstawowych informacje o firmie oraz wstępnego, opisu Twoich potrzeb, pomysłów lub opisu obszarów, które wymagają usprawnienia.",
       img: "/modeofaction/img1.svg",
+      button: <Link href="/contact">
+      <div>
+        <Btn>UMÓW DARMOWE, PÓŁTORAGODZINNE WARSZTATY</Btn>
+      </div>
+    </Link>
     },
     {
       title: "Ustalmy dogodny termin oraz miejsce spotkania",
@@ -162,6 +169,7 @@ export default function Timeline() {
               <div className="text">
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
+                {item.button}
               </div>
             </TimelineItem>
             <TimelineImg>
