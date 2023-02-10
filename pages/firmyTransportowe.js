@@ -49,7 +49,7 @@ export default function Home() {
         subtitle="Firmy transportowe"
       />
       <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla firm transportowych i spedycyjnych?" />
-      <Questions data={data} />
+      {/* <Questions data={data} /> */}
       <CTASection />
       <Contact />
       <Footer />
