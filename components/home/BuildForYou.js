@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function BuildForYou() {
   const items = [
-    { name: "Aplikacje webowe", img: "/home/buildforyou/icon1.png" },
+    { name: "Aplikacje webowe", img: "/home/buildforyou/icon1.svg" },
     { name: "Aplikacje mobilne", img: "/home/buildforyou/icon4.svg" },
     {
       name: "Rozwiązania Augmented Realty",

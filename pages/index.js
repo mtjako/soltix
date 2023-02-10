@@ -7,7 +7,7 @@ import Distinctions from "../components/home/Distinctions";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
 import { Logos } from "../components/home/Logos";
-import Questions from "../components/home/Questions";
+// import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
@@ -16,7 +16,7 @@ import { Techs } from "../components/home/TechSlider";
 const data = [
   {
     title:
-      "Wciąż dużo procesów w Twojej firmie przetwarzanych jest na kartkach, różnych dokumentach lub excelach?",
+      "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
     text: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
     image: "/home/questions/photo.svg",
   },
@@ -42,13 +42,13 @@ export default function Home() {
       </Head>
       <Navigation />
       <Hero
-        title="Tworzymy oprogramowanie “szyte na miarę” dla firm, start-upów oraz osób indywidualnych"
+        title="Doradzamy i tworzymy oprogramowanie “szyte na miarę” dla firm oraz start-upów"
         subtitle=""
         main
       />
       <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla Ciebie lub Twojej firmy?" />
       <Logos />
-      <Questions data={data} />
+      {/* <Questions data={data} /> */}
       <CTASection />
       <BuildForYou />
       <Features />

@@ -65,7 +65,7 @@ const XD = styled.div`
   }
   .tiles {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
   }
   .tiles::-moz-scrollbar {
     display: none;

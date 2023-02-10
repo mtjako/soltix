@@ -100,7 +100,7 @@ export default function Hero({ title, subtitle, main }) {
         )}
         <Link href="/contact">
           <div>
-            <Btn>UMÓW DARMOWE, PÓŁTORAGODZINNE WARSZTATY</Btn>
+            <Btn>UMÓW DARMOWE, GODZINNE WARSZTATY</Btn>
           </div>
         </Link>
         <Link href="/modeofaction">
