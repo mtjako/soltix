@@ -44,7 +44,7 @@ export default function Home() {
         subtitle="Firmy produkcyjne"
       />
       <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla firm produkcyjnych?" />
-      <Questions data={data} />
+      {/* <Questions data={data} /> */}
       <CTASection />
       <Contact />
       <Footer />

@@ -59,7 +59,7 @@ const XD = styled.div`
   }
   .logos h2 {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 28px;
     text-align: center;
     margin: 0 0 48px;
   }
