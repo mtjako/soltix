@@ -88,7 +88,7 @@ export default function Hero({ title, subtitle, main }) {
       <HeroText>
         <div ref={TitleRef}>
           <p className="subtitle">{subtitle}</p>
-          <h1>{title}</h1>
+          <h1 className="title">{title}</h1>
         </div>
         {main && (
           <p ref={HeroDescRef} className="desc">
@@ -176,6 +176,9 @@ const HeroText = styled.div`
   @media (max-width: 750px) {
     padding: 0 20px;
     text-align: center;
+  }
+  .title {
+    font-size:28px;
   }
   .subtitle {
     font-size: 16px;
