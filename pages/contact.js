@@ -9,18 +9,33 @@ import ContactForm from "../components/contact/ContactForm";
 import { useState, useEffect } from "react";
 import FormData from "form-data";
 import ContactEnd from "../components/contact/ContactEnd";
+import Accordeon from "../components/layout/Accordeon";
+
 
 export default function Contact() {
+  const contactData = [
+    {
+      title: "Co mi dadzą warsztaty?",
+      desc: "Warsztaty pozwolą Ci uporządkować plany i pomysły związane z oprogramowaniem. Ułatwią Ci przejście przez cały proces tworzenia oprogramowania - po warsztatach będziesz uzbrojony w dokumentację (specyfikację wymagań) porządkującą wszystkie założenia, a także szkic (flow) funkcjonalności, widoków, ekranów oraz elementów oprogramowania.",
+    },
+    {
+      title: "Dlaczego warto zrobić warsztaty właśnie z nami?",
+      desc: 'W większości software house’ów takie warsztaty kosztują parę tysięcy i nazywane są “Discovery Call”. Jeśli już są darmowe to bardzo często przypominają rozmowę handlową i więcej usłyszysz o “wspaniałości” danego software house’u niż faktycznie zidentyfikujesz problemy i potrzeby w swojej firmie. Podczas naszych warsztatów zawsze staramy się rysować oprogramowanie (u naszej konkurencji często odbywa się to dopiero po podpisaniu umowy), a to da Tobie (i nam) niesamowitą możliwość zrozumienia czego naprawdę oczekujesz od swojego oprogramowania.',
+    },
+    {
+      title: "Dlaczego warsztaty są darmowe?",
+      desc: 'To jest nasza inwestycja. Wierzymy, że dobre zrozumienie potrzeb i także rozrysowanie oprogramowania znacznie poprawi naszą wydajność w kolejnych etapach procesu programowania, zredukuje poprawki i zminimalizuje ewentualne nieporozumienia. Warsztaty mają też zagwarantować Tobie bezpieczeństwo, pozwolą Tobie poznać nas i nasze kompetencje. Wierzymy, że po warsztatach z nami stwierdzisz: “Tak, ci ludzie znają moją branżę, moje potrzeby i wiedzą czego oczekuję.”',
+    },
+  ];
   const formTemplate = [
     {
       type: "welcome",
       title: "Umów darmowe warsztaty",
       data: [
         `
-        <p>Zanim się spotkamy, odpowiedź na kilka pytań.</p>
-        <p>Zajmie Ci to <b>około 1 minutę</b>.</p>
-        <p>Warsztaty są dedykowane firmom oraz założycielom start-up’ów. Warsztaty są <b>całkowicie darmowe i trwają około 1h</b>.</p>
-        <p>Na warsztatach poznamy Twoją firmę, obszary, które wymagają informatyzacji, przeprowadzimy wstępny szkic oprogramowania, a Ty poznasz nasze kompetencje.</p>
+        <p>Zanim się spotkamy, odpowiedz nam na kilka pytań. Zajmie Ci to <b>około 1 minutę.</b></p>
+        <p>Podczas warsztatów poznamy Twoją firmę lub pomysł na serwis. Określimy możliwości, zidentyfikujemy problemy i obszary, które wymagają cyfrowej automatyzacji. Przeprowadzimy także wstępny szkic (tak, narysujemy go!) oprogramowania, a Ty będziesz miał okazję poznać nasze kompetencje.</p>
+        <p>Warsztaty są całkowicie darmowe i potrwają około 1h.</p>
         `,
       ],
     },
@@ -35,8 +50,8 @@ export default function Contact() {
     {
       type: "textareaFile",
       title:
-        "Jeśli na tym etapie znasz obszary/procesy wymagające automatyzacji i/lub digitalizacji w Twojej firmie, krótko je opisz. W tym miejscu napisz też kilka słów o swoim pomyśle na start’up. Możesz też dodać plik z opisem lub specyfikacją.",
-      data: ["describe", "file"],
+        "Jeśli na tym etapie potrafisz określić obszary lub procesy wymagające automatyzacji lub digitalizacji w Twojej firmie, krótko je opisz. Jeśli masz pomysł na startup w tym miejscu napisz kilka słów o swoim pomyśle. Możesz też dodać plik z opisem lub specyfikacją.",
+      data: ["Czy przed udzieleniem szerszych informacji chcesz podpisać z nami NDA?"],
     },
     {
       type: "radio",
@@ -46,12 +61,13 @@ export default function Contact() {
     {
       type: "radio",
       title:
-        "Jaki budżet firma jest w stanie przeznaczyć na budowę oprogramowania?*",
+        "Jaki budżet Twoja firma lub Ty jesteś w stanie przeznaczyć na budowę oprogramowania?",
       data: [
         "Do 50k PLN netto",
         "50k - 100k PLN netto",
         "100k - 150k PLN netto",
-        "powyżej 150k PLN netto",
+        "150k - 200k PLN netto",
+        "pow. 200k PLN netto",
         "Nie chcę udzielać tej informacji na tym etapie",
       ],
     },
@@ -75,14 +91,10 @@ export default function Contact() {
         { type: "text", name: "Stanowisko*", required: true },
         { type: "email", name: "E-mail*", required: true },
         { type: "text", name: "Numer telefonu*", required: true },
-        {
-          type: "checkbox",
-          name: "Czy przed udzieleniem szerszych informacji chcesz podpisać z nami NDA?",
-          required: false,
-        },
       ],
     },
   ];
+
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState([]);
   const [formDataFile, setFormDataFile] = useState([]);
@@ -121,14 +133,25 @@ export default function Contact() {
     }
     //TEXTAREAFILE
     else if (formTemplate[step].type === "textareaFile") {
-      const formData = form.querySelectorAll("textarea,input[type=file]");
+      const formData = form.querySelectorAll("textarea,input[type=file],input[type=checkbox]");
       // if (formData[0].value.length === 0) return 1;
       const arr = [formData[0].value];
-      const element = JSON.parse(localStorage.getItem("form"));
-      element[step] = arr;
       if (formData[1].files.length != 0) {
         setFormDataFile(formData[1].files);
       }
+      const checkboxarr = [];
+      let isEmpty = 0;
+      formData.forEach((item) => {
+        if (item.type == "checkbox") {
+          checkboxarr.push(item.checked);
+        } else {
+          if (item.required && item.value.length === 0) isEmpty == 0 ? (isEmpty = 1) : "";
+          arr.push(item.value);
+        }
+      });
+      if (isEmpty == 1) return 1;
+      const element = JSON.parse(localStorage.getItem("form"));
+      element[step] = arr + checkboxarr;
       localStorage.setItem("form", JSON.stringify(element));
     }
     //RADIO
@@ -220,6 +243,7 @@ export default function Contact() {
               formDataFile={formDataFile}
               save={save}
             />
+            
             <ContactBottom
               prev={() => prev()}
               next={() => next()}
@@ -227,9 +251,13 @@ export default function Contact() {
               steps={formTemplate.length - 1}
             />
           </>
+          
         ) : (
           <ContactEnd />
         )}
+          <Accordeon
+              data={contactData}
+  />
       </Wrapper>
       <Footer />
     </>

@@ -19,7 +19,14 @@ export default function ContactForm({ step, formTemplate, formData, formDataFile
         </ContactCheckboxWrap>
       )}
       {formTemplate[step].type == "textarea" && <ContactInput id={"textarea" + step + 1} key={"step" + step + 1} defaultValue={formData[step]}/>}
-      {formTemplate[step].type == "textareaFile" && <><ContactInput id={"textarea" + step + 1} key={"step" + step + 1} defaultValue={formData[step] ? formData[step][0] : null}/><FileBox><input id={"inputFile" + step + 1} type="file" multiple onChange={()=>save()} /><p className="label">{formDataFile.length} files</p></FileBox></>}
+      {formTemplate[step].type == "textareaFile" && <><ContactInput id={"textarea" + step + 1} key={"step" + step + 1} defaultValue={formData[step] ? formData[step][0] : null}/><FileBox><input id={"inputFile" + step + 1} type="file" multiple onChange={()=>save()} /><p className="label">{formDataFile.length} files</p></FileBox>        <ContactCheckboxWrap>
+          {formTemplate[step].data.map((item, index) => (
+            <ContactCheckbox key={"step" + step + index}>
+              <input type="checkbox" id={item} defaultChecked={formData[step] ? formData[step].includes(item) : null}/>
+              <label htmlFor={item}>{item}</label>
+            </ContactCheckbox>
+          ))}
+        </ContactCheckboxWrap></>}
       {formTemplate[step].type == "radio" && (
         <ContactRadioWrap>
           {formTemplate[step].data.map((item, index) => (
@@ -183,6 +190,7 @@ const ContactCheckbox = styled.div`
     width: 24px;
     height: 24px;
     margin-right: 8px;
+    margin-top: 8px;
     border-radius: 4px;
     display: inline-block;
     cursor: pointer;
