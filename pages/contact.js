@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Accordeon from "../components/layout/Accordeon";
 import Navigation from "../components/layout/Navigation";
 import Footer from "../components/layout/Footer";
 import styled from "styled-components";
@@ -9,8 +10,6 @@ import ContactForm from "../components/contact/ContactForm";
 import { useState, useEffect } from "react";
 import FormData from "form-data";
 import ContactEnd from "../components/contact/ContactEnd";
-import Accordeon from "../components/layout/Accordeon";
-
 
 export default function Contact() {
   const contactData = [
@@ -20,11 +19,11 @@ export default function Contact() {
     },
     {
       title: "Dlaczego warto zrobić warsztaty właśnie z nami?",
-      desc: 'W większości software house’ów takie warsztaty kosztują parę tysięcy i nazywane są “Discovery Call”. Jeśli już są darmowe to bardzo często przypominają rozmowę handlową i więcej usłyszysz o “wspaniałości” danego software house’u niż faktycznie zidentyfikujesz problemy i potrzeby w swojej firmie. Podczas naszych warsztatów zawsze staramy się rysować oprogramowanie (u naszej konkurencji często odbywa się to dopiero po podpisaniu umowy), a to da Tobie (i nam) niesamowitą możliwość zrozumienia czego naprawdę oczekujesz od swojego oprogramowania.',
+      desc: "W większości software house’ów takie warsztaty kosztują parę tysięcy i nazywane są “Discovery Call”. Jeśli już są darmowe to bardzo często przypominają rozmowę handlową i więcej usłyszysz o “wspaniałości” danego software house’u niż faktycznie zidentyfikujesz problemy i potrzeby w swojej firmie. Podczas naszych warsztatów zawsze staramy się rysować oprogramowanie (u naszej konkurencji często odbywa się to dopiero po podpisaniu umowy), a to da Tobie (i nam) niesamowitą możliwość zrozumienia czego naprawdę oczekujesz od swojego oprogramowania.",
     },
     {
       title: "Dlaczego warsztaty są darmowe?",
-      desc: 'To jest nasza inwestycja. Wierzymy, że dobre zrozumienie potrzeb i także rozrysowanie oprogramowania znacznie poprawi naszą wydajność w kolejnych etapach procesu programowania, zredukuje poprawki i zminimalizuje ewentualne nieporozumienia. Warsztaty mają też zagwarantować Tobie bezpieczeństwo, pozwolą Tobie poznać nas i nasze kompetencje. Wierzymy, że po warsztatach z nami stwierdzisz: “Tak, ci ludzie znają moją branżę, moje potrzeby i wiedzą czego oczekuję.”',
+      desc: "To jest nasza inwestycja. Wierzymy, że dobre zrozumienie potrzeb i także rozrysowanie oprogramowania znacznie poprawi naszą wydajność w kolejnych etapach procesu programowania, zredukuje poprawki i zminimalizuje ewentualne nieporozumienia. Warsztaty mają też zagwarantować Tobie bezpieczeństwo, pozwolą Tobie poznać nas i nasze kompetencje. Wierzymy, że po warsztatach z nami stwierdzisz: “Tak, ci ludzie znają moją branżę, moje potrzeby i wiedzą czego oczekuję.”",
     },
   ];
   const formTemplate = [
@@ -51,7 +50,22 @@ export default function Contact() {
       type: "textareaFile",
       title:
         "Jeśli na tym etapie potrafisz określić obszary lub procesy wymagające automatyzacji lub digitalizacji w Twojej firmie, krótko je opisz. Jeśli masz pomysł na startup w tym miejscu napisz kilka słów o swoim pomyśle. Możesz też dodać plik z opisem lub specyfikacją.",
-      data: ["Czy przed udzieleniem szerszych informacji chcesz podpisać z nami NDA?"],
+      data: [
+        "describe",
+        "file",
+        {
+          type: "checkbox",
+          name: "Czy przed udzieleniem szerszych informacji chcesz podpisać z nami NDA?",
+          required: false,
+        },
+      ],
+      data2: [
+        {
+          type: "checkbox",
+          name: "Czy przed udzieleniem szerszych informacji chcesz podpisać z nami NDA?",
+          required: false,
+        },
+      ],
     },
     {
       type: "radio",
@@ -94,7 +108,6 @@ export default function Contact() {
       ],
     },
   ];
-
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState([]);
   const [formDataFile, setFormDataFile] = useState([]);
@@ -133,25 +146,16 @@ export default function Contact() {
     }
     //TEXTAREAFILE
     else if (formTemplate[step].type === "textareaFile") {
-      const formData = form.querySelectorAll("textarea,input[type=file],input[type=checkbox]");
+      const formData = form.querySelectorAll(
+        "textarea,input[type=file],input[type=checkbox]"
+      );
       // if (formData[0].value.length === 0) return 1;
       const arr = [formData[0].value];
+      const element = JSON.parse(localStorage.getItem("form"));
+      element[step] = arr;
       if (formData[1].files.length != 0) {
         setFormDataFile(formData[1].files);
       }
-      const checkboxarr = [];
-      let isEmpty = 0;
-      formData.forEach((item) => {
-        if (item.type == "checkbox") {
-          checkboxarr.push(item.checked);
-        } else {
-          if (item.required && item.value.length === 0) isEmpty == 0 ? (isEmpty = 1) : "";
-          arr.push(item.value);
-        }
-      });
-      if (isEmpty == 1) return 1;
-      const element = JSON.parse(localStorage.getItem("form"));
-      element[step] = arr + checkboxarr;
       localStorage.setItem("form", JSON.stringify(element));
     }
     //RADIO
@@ -180,7 +184,8 @@ export default function Contact() {
             arr.push(item.value);
           }
         } else {
-          if (item.required && item.value.length === 0) isEmpty == 0 ? (isEmpty = 1) : "";
+          if (item.required && item.value.length === 0)
+            isEmpty == 0 ? (isEmpty = 1) : "";
           arr.push(item.value);
         }
       });
@@ -243,7 +248,6 @@ export default function Contact() {
               formDataFile={formDataFile}
               save={save}
             />
-            
             <ContactBottom
               prev={() => prev()}
               next={() => next()}
@@ -251,13 +255,10 @@ export default function Contact() {
               steps={formTemplate.length - 1}
             />
           </>
-          
         ) : (
           <ContactEnd />
         )}
-          <Accordeon
-              data={contactData}
-  />
+        <Accordeon data={contactData} />
       </Wrapper>
       <Footer />
     </>

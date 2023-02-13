@@ -1,37 +1,91 @@
-
 import styled from "styled-components";
 
-export default function ContactForm({ step, formTemplate, formData, formDataFile, save }) {
+export default function ContactForm({
+  step,
+  formTemplate,
+  formData,
+  formDataFile,
+  save,
+}) {
   return (
     <ContactFormWrapper>
       <h2>{formTemplate[step].title}</h2>
       {formTemplate[step].type == "welcome" && (
-        <ContactWelcome dangerouslySetInnerHTML={{ __html: formTemplate[step].data[0] }}></ContactWelcome>
+        <ContactWelcome
+          dangerouslySetInnerHTML={{ __html: formTemplate[step].data[0] }}
+        ></ContactWelcome>
       )}
       {formTemplate[step].type == "checkbox" && (
         <ContactCheckboxWrap>
           {formTemplate[step].data.map((item, index) => (
             <ContactCheckbox key={"step" + step + index}>
-              <input type="checkbox" id={item} defaultChecked={formData[step] ? formData[step].includes(item) : null}/>
+              <input
+                type="checkbox"
+                id={item}
+                defaultChecked={
+                  formData[step] ? formData[step].includes(item) : null
+                }
+              />
               <label htmlFor={item}>{item}</label>
             </ContactCheckbox>
           ))}
         </ContactCheckboxWrap>
       )}
-      {formTemplate[step].type == "textarea" && <ContactInput id={"textarea" + step + 1} key={"step" + step + 1} defaultValue={formData[step]}/>}
-      {formTemplate[step].type == "textareaFile" && <><ContactInput id={"textarea" + step + 1} key={"step" + step + 1} defaultValue={formData[step] ? formData[step][0] : null}/><FileBox><input id={"inputFile" + step + 1} type="file" multiple onChange={()=>save()} /><p className="label">{formDataFile.length} files</p></FileBox>        <ContactCheckboxWrap>
-          {formTemplate[step].data.map((item, index) => (
-            <ContactCheckbox key={"step" + step + index}>
-              <input type="checkbox" id={item} defaultChecked={formData[step] ? formData[step].includes(item) : null}/>
-              <label htmlFor={item}>{item}</label>
-            </ContactCheckbox>
-          ))}
-        </ContactCheckboxWrap></>}
+      {formTemplate[step].type == "textarea" && (
+        <ContactInput
+          id={"textarea" + step + 1}
+          key={"step" + step + 1}
+          defaultValue={formData[step]}
+        />
+      )}
+      {formTemplate[step].type == "textareaFile" && (
+        <>
+          <ContactInput
+            id={"textarea" + step + 1}
+            key={"step" + step + 1}
+            defaultValue={formData[step] ? formData[step][0] : null}
+          />
+          <FileBox>
+            <input
+              id={"inputFile" + step + 1}
+              type="file"
+              multiple
+              onChange={() => save()}
+            />
+            <p className="label">{formDataFile.length} files</p>
+          </FileBox>
+          <br />
+          <ContactInputWrap>
+            {formTemplate[step].data2.map((item, index) => (
+              <ContactInputItem
+                key={"step" + step + index}
+                className={item.type}
+              >
+                <label htmlFor={item.name}>{item.name}</label>
+                <input
+                  type={"checkbox"}
+                  id={item.name}
+                  name={item.name}
+                  defaultValue={formData[step] ? formData[step][index] : null}
+                  defaultChecked={formData[step] ? formData[step][index] : null}
+                />
+              </ContactInputItem>
+            ))}
+          </ContactInputWrap>
+        </>
+      )}
       {formTemplate[step].type == "radio" && (
         <ContactRadioWrap>
           {formTemplate[step].data.map((item, index) => (
             <ContactRadio key={"step" + step + index}>
-              <input type="radio" id={item} name={"step" + step} defaultChecked={formData[step] ? formData[step].includes(item) : null}/>
+              <input
+                type="radio"
+                id={item}
+                name={"step" + step}
+                defaultChecked={
+                  formData[step] ? formData[step].includes(item) : null
+                }
+              />
               <label htmlFor={item}>{item}</label>
             </ContactRadio>
           ))}
@@ -42,7 +96,13 @@ export default function ContactForm({ step, formTemplate, formData, formDataFile
           {formTemplate[step].data.map((item, index) => (
             <ContactInputItem key={"step" + step + index} className={item.type}>
               <label htmlFor={item.name}>{item.name}</label>
-              <input type={item.type} id={item.name} name={item.name} defaultValue={formData[step] ? formData[step][index] : null} defaultChecked={formData[step] ? formData[step][index] : null}/>
+              <input
+                type={item.type}
+                id={item.name}
+                name={item.name}
+                defaultValue={formData[step] ? formData[step][index] : null}
+                defaultChecked={formData[step] ? formData[step][index] : null}
+              />
             </ContactInputItem>
           ))}
         </ContactInputWrap>
@@ -55,16 +115,16 @@ const ContactInputWrap = styled.div`
   display: grid;
   gap: 24px 32px;
   grid-template-columns: repeat(2, 1fr);
-  @media(max-width: 600px) {
-  grid-template-columns: repeat(1, 1fr);
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
 const ContactInputItem = styled.div`
   display: flex;
   flex-direction: column;
-  &.checkbox{
-  flex-direction: row-reverse;
+  &.checkbox {
+    flex-direction: row-reverse;
   }
   input {
     border: none;
@@ -103,8 +163,8 @@ const ContactFormWrapper = styled.form`
     margin-bottom: 16px;
     color: ${(props) => props.theme.neutral700};
   }
-  input[type="file"]{
-    &::-webkit-file-upload-button{
+  input[type="file"] {
+    &::-webkit-file-upload-button {
       background-color: ${(props) => props.theme.neutral100};
       border: none;
       color: ${(props) => props.theme.neutral600};
@@ -122,7 +182,7 @@ const ContactFormWrapper = styled.form`
 `;
 const ContactWelcome = styled.div`
   max-width: 570px;
-  p{
+  p {
     margin-bottom: 8px;
   }
 `;
@@ -190,7 +250,6 @@ const ContactCheckbox = styled.div`
     width: 24px;
     height: 24px;
     margin-right: 8px;
-    margin-top: 8px;
     border-radius: 4px;
     display: inline-block;
     cursor: pointer;
@@ -212,9 +271,9 @@ const ContactCheckbox = styled.div`
 `;
 
 const FileBox = styled.div`
-display: flex;
-position: relative;
-  .label{
+  display: flex;
+  position: relative;
+  .label {
     position: absolute;
     left: 150px;
     color: #000;
