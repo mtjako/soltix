@@ -53,11 +53,6 @@ export default function Contact() {
       data: [
         "describe",
         "file",
-        {
-          type: "checkbox",
-          name: "Czy przed udzieleniem szerszych informacji chcesz podpisać z nami NDA?",
-          required: false,
-        },
       ],
       data2: [
         {
@@ -150,9 +145,18 @@ export default function Contact() {
         "textarea,input[type=file],input[type=checkbox]"
       );
       // if (formData[0].value.length === 0) return 1;
-      const arr = [formData[0].value];
+      const arr = [];
       const element = JSON.parse(localStorage.getItem("form"));
       element[step] = arr;
+      let isEmpty = 0;
+      formData.forEach((item) => {
+        if (item.type == "checkbox") {
+          arr.push(item.checked);
+        } else {
+            isEmpty == 0 ? (isEmpty = 1) : "";
+          arr.push(item.value);
+        }
+      });
       if (formData[1].files.length != 0) {
         setFormDataFile(formData[1].files);
       }
