@@ -6,25 +6,36 @@ import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Header from "../layout/Header";
 
-export default function Distinctions({ title }) {
+export default function DistinctionsProd({ title }) {
   const itemData = [
     {
       img: "/home/questions/photo.svg",
       title:
-        "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
-      desc: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
+        "Automatyzacja procesów produkcyjnych",
+      desc: "Oprogramowanie ściśle dostosowane do specyfiki działalności Twojej firmy produkcyjnej pozwoli na zautomatyzowanie wielu procesów, co z kolei przyspieszy całą produkcję i zminimalizuje możliwość ewentualnych odchyleń od założonych norm oraz popełnienia błędów.",
     },
     {
       img: "/home/questions/photo2.svg",
       title:
-        "Chciałbyś umożliwić dostęp do aplikacji swoim klientom?",
-      desc: "Twoi klienci będą mogli zalogować się do dedykowanego panelu poprzez aplikację webową lub mobilną i łatwo dostarczać lub sprawdzić informacje, które Twoja firma im udostępni. Dzięki temu Twoi kontrahenci będą mieli dostęp np. do dokumentów czy formularzy. Będą mogli śledzić statystyki wykonywanych zadań oraz być w stałym kontakcie z Twoimi pracownikami.",
+        "Poprawa kontroli nad produkcją",
+      desc: "Dedykowane oprogramowanie tworzone “od zera” umożliwi Tobie łatwiejsze monitorowanie procesów produkcyjnych na każdym ich etapie - od stworzenia koncepcji po wysłanie finalnego produktu do klienta. Pozwoli także na szybką reakcję osób decyzyjnych na ewentualne problemy i błędy.",
     },
     {
       img: "/home/contact/process.svg",
-      title: "Czujesz, że w Twojej firmie potrzebna jest automatyzacja i digitalizacja procesów, ale nie wiesz jak za to się zabrać?",
-      desc: "Jesteśmy po to, aby ułatwić Tobie cały ten proces! Wspólnie określimy potrzeby, zaproponujemy możliwe funkcjonalności i stworzymy specyfikację wymagań Twojego oprogramowania.",
+      title: "Optymalizacja zarządzania danymi.",
+      desc: 'Oprogramowanie "szyte na miarę" pomoże w gromadzeniu, przetwarzaniu i analizowaniu wszelkich danych związanych z produkcją. Dzięki temu Twoja firma będzie mogla dokładnie śledzić, jakie procesy produkcyjne przynoszą najlepsze wyniki i na tej podstawie podejmować strategiczne decyzje.',
     },
+    {
+      img: "/home/contact/process.svg",
+      title: "Poprawa efektywności i wydajności",
+      desc: 'Zastosowanie stworzonego przez nas oprogramowania pozwoli na lepszą koordynację prac pomiędzy różnymi działami w firmie. To z kolei, np. poprzez natychmiastową wymianę informacji, bezpośrednio przełoży się na zwiększenie efektywności i wydajności całego Twojej firmy.',
+    },
+    {
+      img: "/home/contact/process.svg",
+      title: "Redukcja kosztów",
+      desc: 'Na bazie naszych doświadczeń wiemy, że oprogramowanie "szyte na miarę" pomoże w minimalizacji kosztów produkcji, na przykład poprzez optymalizację zarządzania zasobami ludzkimi, zarządzania stanami zamówień, zapasów czy też zmniejszenie ilości odpadów.',
+    },
+    
   ];
   gsap.registerPlugin(ScrollTrigger);
   const TitleRef = useRef(null);

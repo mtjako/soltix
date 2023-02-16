@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Contact from "../components/home/Contact";
 import CTASection from "../components/home/CTASection";
-import DistinctionsStartup from "../components/home/DistinctionsStartup";
+import DistinctionsMag from "../components/home/DistinctionsMag";
 import Hero from "../components/home/Hero";
+import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
@@ -44,11 +45,12 @@ export default function Home() {
       </Head>
       <Navigation />
       <Hero
-        title="Nie jesteśmy firmą, która po prostu “zaprogramuje” Twój pomysł. Doradzimy Tobie jak jak zaplanować MVP i stworzyć dobrą, efektywną i atrakcyjną pod względem UI/UX aplikację mobilną lub webową."
-        subtitle=""
+        title="Oprogramowanie stworzone “od zera” realnie pomaga firmie transportowej w ulepszaniu logistyki, śledzeniu ładunków i pojazdów, zarządzaniu flotą, zarządzaniu dokumentacją oraz poprawie efektywności. Dzięki temu firma minimalizuje koszty, zwiększa wydajność i poprawia jakość obsługi klienta, co z kolei przekłada się na lepsze wyniki finansowe."
+        subtitle="Firmy magazynowe"
       />
-      <DistinctionsStartup title="Dlaczego jesteśmy idealnym partnerem dla osób posiadających pomysł na start-up?" />
-      <CTASection title="Masz pomysł na start-up, ale nie wiesz jak za to się zabrać? "/>
+      <DistinctionsMag title="Dlaczego jesteśmy idealnym partnerem dla firm magazynowych?" />
+      {/* <Questions data={data} /> */}
+      <CTASection />
       <Contact />
       <Footer />
     </div>

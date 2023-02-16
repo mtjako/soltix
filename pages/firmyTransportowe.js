@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Contact from "../components/home/Contact";
 import CTASection from "../components/home/CTASection";
-import Distinctions from "../components/home/Distinctions";
-import Hero from "../components/home/Hero";
+import DistinctionsTrans from "../components/home/DistinctionsTrans";
+import HeroTrans from "../components/home/HeroTrans";
 import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
@@ -44,11 +44,11 @@ export default function Home() {
         <link rel="icon" href="logo/favicon.ico" />
       </Head>
       <Navigation />
-      <Hero
-        title="Doradzamy firmom transportowym w budowie aplikacji webowych i mobilnych. Tworzymy “szyte na miarę” oprogramowanie dla firm transportowych i spedycyjnych."
+      <HeroTrans
+        title="Oprogramowanie stworzone “od zera” realnie pomaga firmie transportowej w ulepszaniu logistyki, śledzeniu ładunków i pojazdów, zarządzaniu flotą, zarządzaniu dokumentacją oraz poprawie efektywności. Dzięki temu firma minimalizuje koszty, zwiększa wydajność i poprawia jakość obsługi klienta, co z kolei przekłada się na lepsze wyniki finansowe."
         subtitle="Firmy transportowe"
       />
-      <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla firm transportowych i spedycyjnych?" />
+      <DistinctionsTrans title="Dlaczego jesteśmy idealnym partnerem dla firm logistycznych, spedycyjnych i transportowych?" />
       {/* <Questions data={data} /> */}
       <CTASection />
       <Contact />

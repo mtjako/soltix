@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Contact from "../components/home/Contact";
 import CTASection from "../components/home/CTASection";
-import Distinctions from "../components/home/Distinctions";
+import DistinctionsProd from "../components/home/DistinctionsProd";
 import Hero from "../components/home/Hero";
 import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
@@ -40,10 +40,10 @@ export default function Home() {
       </Head>
       <Navigation />
       <Hero
-        title="Doradzamy firmom produkcyjnym w budowie aplikacji webowych i mobilnych. Tworzymy “szyte na miarę” oprogramowanie dla firm produkcyjnych."
+        title="Zastosowanie dedykowanego oprogramowania “szytego na miarę” przyniesie Twojej firmie wiele korzyści, zwłaszcza jeśli chodzi o automatyzację procesów, poprawę kontroli nad produkcją, optymalizację zarządzania danymi, poprawę efektywności oraz wydajności i redukcję kosztów."
         subtitle="Firmy produkcyjne"
       />
-      <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla firm produkcyjnych?" />
+      <DistinctionsProd title="Dlaczego jesteśmy idealnym partnerem dla firm produkcyjnych?" />
       {/* <Questions data={data} /> */}
       <CTASection />
       <Contact />

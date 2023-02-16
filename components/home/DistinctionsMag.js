@@ -6,24 +6,36 @@ import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Header from "../layout/Header";
 
-export default function Distinctions({ title }) {
+export default function DistinctionsMag({ title }) {
   const itemData = [
     {
       img: "/home/questions/photo.svg",
       title:
-        "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
-      desc: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
+        "Automatyzacja procesów magazynowych",
+      desc: "Oprogramowanie “szyte na miarę” pomaga w automatyzacji procesów magazynowych, takich jak przyjmowanie towarów, ich składowanie, przetwarzanie zamówień, kompletacja i wysyłka. Dzięki temu znacznie zwiększa wydajność i dokładność pracy, a także minimalizuje ryzyko pomyłek.",
     },
     {
       img: "/home/questions/photo2.svg",
       title:
-        "Chciałbyś umożliwić dostęp do aplikacji swoim klientom?",
-      desc: "Twoi klienci będą mogli zalogować się do dedykowanego panelu poprzez aplikację webową lub mobilną i łatwo dostarczać lub sprawdzić informacje, które Twoja firma im udostępni. Dzięki temu Twoi kontrahenci będą mieli dostęp np. do dokumentów czy formularzy. Będą mogli śledzić statystyki wykonywanych zadań oraz być w stałym kontakcie z Twoimi pracownikami.",
+        "Zarządzanie stanami magazynowymi",
+      desc: "Oprogramowanie dedykowane pomoże w monitorowaniu stanów magazynowych, co umożliwi bieżącą aktualizację stanu magazynu i przepływu towarów. Ułatwi to zarządzanie zapasami i pomoże uniknąć braków towarów, co z kolei przełoży się na zadowolenie klientów.",
     },
     {
       img: "/home/contact/process.svg",
-      title: "Czujesz, że w Twojej firmie potrzebna jest automatyzacja i digitalizacja procesów, ale nie wiesz jak za to się zabrać?",
-      desc: "Jesteśmy po to, aby ułatwić Tobie cały ten proces! Wspólnie określimy potrzeby, zaproponujemy możliwe funkcjonalności i stworzymy specyfikację wymagań Twojego oprogramowania.",
+      title: "Optymalizacja przestrzeni magazynowej ",
+      desc: "Oprogramowanie tworzone “od zera” pomaga w optymalizacji przestrzeni magazynowej poprzez wykorzystanie wprowadzonych danych, zaawansowanych algorytmów i analiz danych. Dzięki temu optymalizuje układ zajętości regałów i półek w magazynie, co pozwala na efektywniejsze wykorzystanie powierzchni i minimalizację kosztów.",
+    },
+    {
+      img: "/home/questions/photo.svg",
+      title:
+        "Kontrola jakości",
+      desc: "Tworzone przez nas oprogramowanie może pomóc w kontroli jakości produktów składowanych w magazynie, na przykład poprzez kontrolę dat ważności i śledzenie partii produktów. Dzięki temu tylko produkty o dobrej jakości będą dostarczane klientom.",
+    },
+    {
+      img: "/home/questions/photo2.svg",
+      title:
+        "Zarządzanie zamówieniami i przesyłkami",
+      desc: "Oprogramowanie “szyte na miarę” pomaga w zarządzaniu zamówieniami i przesyłkami, na przykład poprzez automatyczne generowanie etykiet i dokumentów przewozowych. Powoduje to minimalizację czasu potrzebnego na przygotowanie zamówień do wysyłki i poprawia jakość obsługi klienta.",
     },
   ];
   gsap.registerPlugin(ScrollTrigger);

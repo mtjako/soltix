@@ -6,24 +6,36 @@ import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Header from "../layout/Header";
 
-export default function Distinctions({ title }) {
+export default function DistinctionsTrans({ title }) {
   const itemData = [
     {
       img: "/home/questions/photo.svg",
       title:
-        "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
-      desc: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
+        "Ulepszona logistyka",
+      desc: "Oprogramowanie dedykowane pomaga firmie transportowej w zoptymalizowaniu planowania tras, poprzez zintegrowanie systemu nawigacyjnego, map i prognoz pogody, co pozwala na oszczędność czasu i kosztów oraz minimalizuje ryzyko opóźnień w dostawach.",
     },
     {
       img: "/home/questions/photo2.svg",
       title:
-        "Chciałbyś umożliwić dostęp do aplikacji swoim klientom?",
-      desc: "Twoi klienci będą mogli zalogować się do dedykowanego panelu poprzez aplikację webową lub mobilną i łatwo dostarczać lub sprawdzić informacje, które Twoja firma im udostępni. Dzięki temu Twoi kontrahenci będą mieli dostęp np. do dokumentów czy formularzy. Będą mogli śledzić statystyki wykonywanych zadań oraz być w stałym kontakcie z Twoimi pracownikami.",
+        "Śledzenie ładunków i pojazdów",
+      desc: "Oprogramowanie “szyte na miarę” pozwala firmie transportowej na śledzenie pojazdów i ładunków w czasie rzeczywistym. Dzięki temu Twoja firma będzie mogła szybko reagować na wszelkie nieprzewidziane sytuacje, takie jak opóźnienia, wypadki lub awarie, co pozwoli na szybszą reakcję i zminimalizowanie problemów.",
     },
     {
       img: "/home/contact/process.svg",
-      title: "Czujesz, że w Twojej firmie potrzebna jest automatyzacja i digitalizacja procesów, ale nie wiesz jak za to się zabrać?",
-      desc: "Jesteśmy po to, aby ułatwić Tobie cały ten proces! Wspólnie określimy potrzeby, zaproponujemy możliwe funkcjonalności i stworzymy specyfikację wymagań Twojego oprogramowania.",
+      title: "Zarządzanie flotą",
+      desc: "Oprogramowanie stworzone “od zera” pomoże Twojej firmie transportowej w zarządzaniu flotą pojazdów, na przykład poprzez monitorowanie stanu technicznego pojazdów, przeglądów i napraw, co pozwoli na zapobieganie awariom i minimalizowanie ryzyka przestojów.",
+    },
+    {
+      img: "/home/questions/photo.svg",
+      title:
+        "Zarządzanie dokumentacją",
+      desc: "Stworzone przez nas oprogramowanie pomoże Twojej firmie w zarządzaniu dokumentacją związaną z przewozami, taką jak faktury, umowy i listy przewozowe, co pozwoli na łatwiejsze, szybsze i bardziej przejrzyste zarządzanie dokumentami.",
+    },
+    {
+      img: "/home/questions/photo2.svg",
+      title:
+        "Poprawa efektywności",
+      desc: "Oprogramowanie dedykowane pomoże w poprawie efektywności całej firmy transportowej, na przykład poprzez zminimalizowanie zużycia i kosztów paliwa, optymalizację tras, planowania dostaw, szybką wymianę dokumentów, dzięki czemu Twoja firma osiągnie lepsze wyniki finansowe.",
     },
   ];
   gsap.registerPlugin(ScrollTrigger);
