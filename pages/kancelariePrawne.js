@@ -6,17 +6,17 @@ import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
+import Header from "../components/layout/Header";
+
 const data = [
   {
     image: "/home/questions/photo.svg",
-    title:
-      "Zarządzanie dokumentami",
+    title: "Zarządzanie dokumentami",
     text: "Oprogramowanie “szyte na miarę” pomaga w zarządzaniu dokumentami prawnymi, takimi jak umowy, protokoły i pisma procesowe. Dzięki temu można z łatwością przechowywać, organizować i przeszukiwać dokumenty, co pozwala na szybkie i łatwe odnalezienie potrzebnych informacji.",
   },
   {
     image: "/home/questions/photo2.svg",
-    title:
-      "Śledzenie spraw",
+    title: "Śledzenie spraw",
     text: "Oprogramowanie jakie możemy stworzyć może pomóc w śledzeniu postępów w sprawach prawniczych, dzięki czemu łatwiej jest kontrolować procesy oraz terminy i zobowiązania związane z daną sprawą. Oprogramowanie umożliwi także łatwiejsze zarządzanie danymi klientów, co zmniejszy nakład pracy pracowników kancelarii.",
   },
   {
@@ -26,8 +26,7 @@ const data = [
   },
   {
     image: "/home/questions/photo2.svg",
-    title:
-      "Analiza danych",
+    title: "Analiza danych",
     text: "Nasze oprogramowanie jakie możemy stworzyć dla kancelarii prawnej pomoże w analizie danych, takich jak koszty prowadzenia spraw i uzyskane dochody, co pozwoli na dokładne monitorowanie finansów kancelarii. Może też pomóc w identyfikacji wzorców i tendencji, które pomogą w podejmowaniu bardziej świadomych decyzji biznesowych.",
   },
   {
@@ -55,6 +54,11 @@ export default function Home() {
         subtitle=""
         subtitleGray="Oprogramowanie tworzone “szyte na miarę” pomaga kancelarii prawnej w tworzeniu i zarządzaniu dokumentami, automatyzacji procesów, śledzeniu spraw, analizie danych oraz zapewnieniu ich  bezpieczeństwa. Dzięki temu zwiększa się efektywność pracy kancelarii, minimalizuje się czas i koszty pracy oraz poprawia się jakość obsługi klienta."
       />
+      <Header
+        title="Dlaczego jesteśmy idealnym partnerem dla kancelarii prawnych?"
+        center
+      ></Header>
+
       <Questions data={data} />
       <CTASection />
       <Contact />

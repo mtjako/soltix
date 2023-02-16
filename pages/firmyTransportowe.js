@@ -6,6 +6,8 @@ import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
+import Header from "../components/layout/Header";
+
 const data = [
   {
     image: "/home/questions/photo.svg",
@@ -56,6 +58,8 @@ export default function Home() {
         subtitle=""
         subtitleGray="Oprogramowanie stworzone “od zera” realnie pomaga firmie transportowej w ulepszaniu logistyki, śledzeniu ładunków i pojazdów, zarządzaniu flotą, zarządzaniu dokumentacją oraz poprawie efektywności. Dzięki temu firma minimalizuje koszty, zwiększa wydajność i poprawia jakość obsługi klienta, co z kolei przekłada się na lepsze wyniki finansowe."
       />
+            <Header title="Dlaczego jesteśmy idealnym partnerem dla firm logistycznych, spedycyjnych i transportowych?" center></Header>
+
       <Questions data={data} />
       <CTASection />
       <Contact />

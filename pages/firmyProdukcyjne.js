@@ -6,17 +6,17 @@ import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
+import Header from "../components/layout/Header";
+
 const data = [
   {
     image: "/home/questions/photo.svg",
-    title:
-      "Automatyzacja procesów produkcyjnych",
+    title: "Automatyzacja procesów produkcyjnych",
     text: "Oprogramowanie ściśle dostosowane do specyfiki działalności Twojej firmy produkcyjnej pozwoli na zautomatyzowanie wielu procesów, co z kolei przyspieszy całą produkcję i zminimalizuje możliwość ewentualnych odchyleń od założonych norm oraz popełnienia błędów.",
   },
   {
     image: "/home/questions/photo2.svg",
-    title:
-      "Poprawa kontroli nad produkcją",
+    title: "Poprawa kontroli nad produkcją",
     text: "Dedykowane oprogramowanie tworzone “od zera” umożliwi Tobie łatwiejsze monitorowanie procesów produkcyjnych na każdym ich etapie - od stworzenia koncepcji po wysłanie finalnego produktu do klienta. Pozwoli także na szybką reakcję osób decyzyjnych na ewentualne problemy i błędy.",
   },
   {
@@ -27,14 +27,13 @@ const data = [
   {
     image: "/home/contact/process.svg",
     title: "Poprawa efektywności i wydajności",
-    text: 'Zastosowanie stworzonego przez nas oprogramowania pozwoli na lepszą koordynację prac pomiędzy różnymi działami w firmie. To z kolei, np. poprzez natychmiastową wymianę informacji, bezpośrednio przełoży się na zwiększenie efektywności i wydajności całego Twojej firmy.',
+    text: "Zastosowanie stworzonego przez nas oprogramowania pozwoli na lepszą koordynację prac pomiędzy różnymi działami w firmie. To z kolei, np. poprzez natychmiastową wymianę informacji, bezpośrednio przełoży się na zwiększenie efektywności i wydajności całego Twojej firmy.",
   },
   {
     image: "/home/contact/process.svg",
     title: "Redukcja kosztów",
     text: 'Na bazie naszych doświadczeń wiemy, że oprogramowanie "szyte na miarę" pomoże w minimalizacji kosztów produkcji, na przykład poprzez optymalizację zarządzania zasobami ludzkimi, zarządzania stanami zamówień, zapasów czy też zmniejszenie ilości odpadów.',
   },
-  
 ];
 export default function Home() {
   return (
@@ -55,6 +54,10 @@ export default function Home() {
         subtitle=""
         subtitleGray="Zastosowanie dedykowanego oprogramowania “szytego na miarę” przyniesie Twojej firmie wiele korzyści, zwłaszcza jeśli chodzi o automatyzację procesów, poprawę kontroli nad produkcją, optymalizację zarządzania danymi, poprawę efektywności oraz wydajności i redukcję kosztów."
       />
+      <Header
+        title="Dlaczego jesteśmy idealnym partnerem dla firm produkcyjnych?"
+        center
+      ></Header>
       <Questions data={data} />
       <CTASection />
       <Contact />

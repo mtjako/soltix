@@ -6,6 +6,8 @@ import Hero from "../components/home/Hero";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
+import Header from "../components/layout/Header";
+
 const data = [
   {
     title: "Wiedza techniczna i doświadczenie",
@@ -13,8 +15,7 @@ const data = [
     image: "/home/questions/photo.svg",
   },
   {
-    title:
-      "Minimalizacja czasu i kosztów",
+    title: "Minimalizacja czasu i kosztów",
     text: "Współpraca z nami pomoże w znacznym zmniejszeniu czasu potrzebnego do opracowania i wdrożenia oprogramowania, a co za tym idzie również i kosztów. Dzięki korzystaniu ze sprawdzonych narzędzi do tworzenia oprogramowania, zaoszczędzimy Twój czas i pieniądze potrzebne na wdrożenie Twojego pomysłu.",
     image: "/home/questions/photo3.svg",
   },
@@ -53,8 +54,12 @@ export default function Home() {
         subtitle=""
         subtitleGray=""
       />
+      <Header
+        title="Dlaczego jesteśmy idealnym partnerem dla osób posiadających pomysł na start-up?"
+        center
+      />
       <Questions data={data} />
-      <CTASection title="Masz pomysł na start-up, ale nie wiesz jak za to się zabrać? "/>
+      <CTASection title="Masz pomysł na start-up, ale nie wiesz jak za to się zabrać? " />
       <Contact />
       <Footer />
     </div>
