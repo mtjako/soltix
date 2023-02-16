@@ -16,19 +16,16 @@ export default function Questions({ data }) {
   const addToWrapRefs = (el) => {
     if (el && !QuestionWrapRefs.current.includes(el)) {
       QuestionWrapRefs.current.push(el);
-      console.log(1);
     }
   };
   const addToLeftRefs = (el) => {
     if (el && !QuestionLeftRefs.current.includes(el)) {
       QuestionLeftRefs.current.push(el);
-      console.log(2);
     }
   };
   const addToRightRefs = (el) => {
     if (el && !QuestionRightRefs.current.includes(el)) {
       QuestionRightRefs.current.push(el);
-      console.log(QuestionRightRefs);
     }
   };
 
