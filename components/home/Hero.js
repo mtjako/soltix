@@ -8,7 +8,7 @@ import { TextPlugin } from "gsap/dist/TextPlugin";
 import { EasePack } from "gsap/dist/EasePack";
 import Link from "next/link";
 
-export default function Hero({ title, subtitle, main }) {
+export default function Hero({ title, subtitle, subtitleGray, main }) {
   const HeroManRef = useRef();
   const HeroRef = useRef();
   const TitleRef = useRef();
@@ -89,6 +89,7 @@ export default function Hero({ title, subtitle, main }) {
         <div ref={TitleRef}>
           <p className="subtitle">{subtitle}</p>
           <h1 className="title">{title}</h1>
+          <p className="subtitleGray">{subtitleGray}</p>
         </div>
         {main && (
           <p ref={HeroDescRef} className="desc">
@@ -187,6 +188,10 @@ const HeroText = styled.div`
     margin-bottom: 8px;
     text-transform: uppercase;
     color: ${(props) => props.theme.blue600};
+  }
+  .subtitleGray {
+    font-size: 18px;
+    font-weight: 400;
   }
   .break {
     @media (min-width: 750px) {
