@@ -63,8 +63,8 @@ export default function ModeOfAction() {
         <TopText>
           <div ref={TitleRef}>
             <Header
-              subtitle="JAK WYGLĄDAJĄ DARMOWE WARSZTATY?"
-              title="DARMOWE WARSZTATY oraz dalsze kroki rozwoju Twojego oprogramowania"
+              subtitle=""
+              title="Poniżej dowiesz się jak przebiega proces tworzenia od Twojego pomysłu do opublikowania systemu lub aplikacji"
               center
             />
           </div>

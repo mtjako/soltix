@@ -1,31 +1,37 @@
 import Head from "next/head";
 import Contact from "../components/home/Contact";
 import CTASection from "../components/home/CTASection";
-import Distinctions from "../components/home/Distinctions";
+import Questions from "../components/home/Questions";
 import Hero from "../components/home/Hero";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
+import Header from "../components/layout/Header";
+
 const data = [
   {
-    title: "Płacisz sporo za gotowe oprogramowanie dla firm transportowych?",
-    text: "Ponad 85% firm transportowych, decyduje się na współpracę z nami, ponieważ płacą wysokie opłaty miesięczne za korzystanie z gotowych oprogramowań dla firm transportowych lub zauważają zbyt duże skomplikowanie systemów gotowych, które posiadają zbędne dla nich funkcjonalności, albo brakuje istotnych dla nich możliwości. Firmy transportowe decydują się na współpracę z nami, aby nie być zobowiązanym do miesięcznych opłat ograniczonych np. liczbą użytkowników i także, aby posiadać własne, niezależne oprogramowanie.",
+    title: "Wiedza techniczna i doświadczenie",
+    text: "Nasz software house posiada specjalistów z różnych obszarów IT, którzy posiadają niezbędną wiedzę i doświadczenie. Dzięki temu potrafimy opracować, stworzyć i wdrożyć skuteczne rozwiązania programistyczne, które umożliwią bezproblemowe i bezstresowe zrealizowanie Twojego pomysłu na startup.",
     image: "/home/questions/photo.svg",
   },
   {
-    title:
-      "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
-    text: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
+    title: "Minimalizacja czasu i kosztów",
+    text: "Współpraca z nami pomoże w znacznym zmniejszeniu czasu potrzebnego do opracowania i wdrożenia oprogramowania, a co za tym idzie również i kosztów. Dzięki korzystaniu ze sprawdzonych narzędzi do tworzenia oprogramowania, zaoszczędzimy Twój czas i pieniądze potrzebne na wdrożenie Twojego pomysłu.",
     image: "/home/questions/photo3.svg",
   },
   {
-    title: "Potrzebujesz większej kontroli nad flotą?",
-    text: "Rozumiemy, że w Twojej firmie transportowej spedytorzy muszą mieć łatwą kontrolę nad zleceniami a logistycy nad frachtami. Zbudujemy oprogramowanie, które będzie posiadało dokładnie takie dane jakie potrzebujesz. Bez kompromisów lub zbędnych dodatków. Jako osoba zarządzająca otrzymasz system, który pozwoli Ci lepiej śledzić ewentualne opóźnienia, koszty, analizować statystykim, także te finansowe.",
+    title: "Skalowalność biznesu",
+    text: "Nasz software house pomoże Tobie w zaprojektowaniu i wdrożeniu aplikacji, która będzie skalowalna i przygotowany do szybkiego rozwoju wraz z rozwojem firmy i Twoich dalszych planów. To oznacza, że Twój startup będzie miał możliwość rozwijania swojego produktu, w miarę jak będzie rosła liczba użytkowników.",
     image: "/home/questions/photo2.svg",
   },
   {
-    title: "Chciałbyś umożliwić dostęp do aplikacji swoim klientom?",
-    text: "Twoi klienci będą mogli zalogować się do dedykowanego panelu poprzez aplikację webową lub mobilną i łatwo dostarczać informacje, które Twoja firma przetwarza, np. listy przewozowe, dokumenty, formularze, śledzić statystyki lub monitorować etap transportu, być w stałym kontakcie z Twoimi pracownikami, handlowcami.",
+    title: "Wsparcie techniczne",
+    text: "Współpraca z SOLTIX Software House zapewni Tobie wsparcie techniczne na każdym etapie rozwoju aplikacji. Nasi specjaliści będą pracować na bieżąco nad rozwiązywaniem ewentualnych problemów technicznych i dbać o to, aby Twój system działał bez zakłóceń.",
+    image: "/home/questions/photo2.svg",
+  },
+  {
+    title: "Dostęp do nowych technologii",
+    text: "Nasz software house jest zorientowany na najnowsze trendy i technologie, co oznacza, że Twój startup, już od etapu planowania, będzie miał dostęp do najnowszych narzędzi oprogramowania, które przyniosą korzyści dla rozwoju Twojego produktu.",
     image: "/home/questions/photo2.svg",
   },
 ];
@@ -44,11 +50,16 @@ export default function Home() {
       </Head>
       <Navigation />
       <Hero
-        title="Nie jesteśmy software house, który po prostu zaprogramuje Twój pomysł. Doradzamy start-up’om jak stworzyć dobrą aplikację mobilną lub webową i jak zaplanować MVP."
-        subtitle="Startup"
+        title="Nie jesteśmy firmą, która po prostu “zaprogramuje” Twój pomysł. Doradzimy Tobie jak jak zaplanować MVP i stworzyć dobrą, efektywną i atrakcyjną pod względem UI/UX aplikację mobilną lub webową."
+        subtitle=""
+        subtitleGray=""
       />
-      <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla osób posiadających pomysł na start-up?" />
-      <CTASection title="Masz pomysł na start-up, ale nie wiesz jak za to się zabrać? "/>
+      <Header
+        title="Dlaczego jesteśmy idealnym partnerem dla osób posiadających pomysł na start-up?"
+        center
+      />
+      <Questions data={data} />
+      <CTASection title="Masz pomysł na start-up, ale nie wiesz jak za to się zabrać? " />
       <Contact />
       <Footer />
     </div>

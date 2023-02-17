@@ -8,7 +8,7 @@ import { TextPlugin } from "gsap/dist/TextPlugin";
 import { EasePack } from "gsap/dist/EasePack";
 import Link from "next/link";
 
-export default function Hero({ title, subtitle, subtitleGray, main }) {
+export default function HeroTrans({ title, subtitle, subtitleGray, main }) {
   const HeroManRef = useRef();
   const HeroRef = useRef();
   const TitleRef = useRef();
@@ -114,26 +114,8 @@ export default function Hero({ title, subtitle, subtitleGray, main }) {
             width={570}
             height={675}
             objectFit="contain"
-            src="/home/hero/hero.svg"
-            alt="hero image"
-          />
-        </div>
-        <div className="secondary">
-          <Image
-            width={230}
-            height={440}
-            objectFit="contain"
-            src="/home/hero/hero-leaf.svg"
-            alt="hero image leaf"
-          />
-        </div>
-        <div className="tetiary" ref={HeroManRef}>
-          <Image
-            width={125}
-            height={320}
-            objectFit="contain"
-            src="/home/hero/hero-man.svg"
-            alt="hero image man"
+            src="/home/heroTrans/heroTrans.png"
+            alt="hero trans"
           />
         </div>
       </HeroImg>

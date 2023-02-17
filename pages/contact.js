@@ -207,7 +207,6 @@ export default function Contact() {
   };
 
   const next = () => {
-    console.log(save());
     //jeśli pole jest puste nie przenoś dalej
     if (save() == 1) return;
     //przejdź do następnego kroku

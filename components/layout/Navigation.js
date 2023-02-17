@@ -18,7 +18,7 @@ export default function Navigation() {
         </Link>
         <Menu>
           <Link href="/modeofaction" passHref>
-            <MenuItem>Jak wyglądają darmowe warsztaty?</MenuItem>
+            <MenuItem>Jak przebiega proces tworzenia</MenuItem>
           </Link>
           <DropdownBtn>
             <MenuItem onMouseEnter={() => setDropdownOpen(!dropdownOpen)}>
@@ -42,12 +42,12 @@ export default function Navigation() {
                     Firmy transportowej
                   </DropdownItem>
                 </Link>
-                <Link href="/firmyTransportowe">
+                <Link href="/firmyMagazynowe">
                   <DropdownItem onClick={() => setDropdownOpen(false)}>
-                    Magazynu
+                    Firmy magazynowej
                   </DropdownItem>
                 </Link>
-                <Link href="/firmyTransportowe">
+                <Link href="/kancelariePrawne">
                   <DropdownItem onClick={() => setDropdownOpen(false)}>
                     Kancelarii prawnej
                   </DropdownItem>
@@ -71,7 +71,7 @@ export default function Navigation() {
             )}
           </DropdownBtn>
           <Link href="/startup" passHref>
-            <MenuItem>Masz pomysł na start’up?</MenuItem>
+            <MenuItem>Masz pomysł na startup?</MenuItem>
           </Link>
           <Link href="/contact" passHref>
             <MenuItem>Kontakt</MenuItem>

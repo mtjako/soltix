@@ -27,9 +27,6 @@ handler.post(async (req, res) => {
         pass: process.env.pass,
       },
     });
-    console.log("====================================");
-    console.log(content[1]);
-    console.log("====================================");
     const mailOptions = {
       from: `"Soltix" <${process.env.user}>`,
       to: process.env.userTarget,
@@ -120,10 +117,8 @@ handler.post(async (req, res) => {
 
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
-        console.log(error);
         res.status(400).end(JSON.stringify({ message: "Error" }));
       } else {
-        console.log("Email sent: " + info.response);
         res.status(200).end(JSON.stringify({ message: "Send Mail" }));
       }
     });

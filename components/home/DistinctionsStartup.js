@@ -6,24 +6,32 @@ import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Header from "../layout/Header";
 
-export default function Distinctions({ title }) {
+export default function DistinctionsStartup({ title }) {
   const itemData = [
     {
-      img: "/home/questions/photo.svg",
-      title:
-        "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
-      desc: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
-    },
-    {
-      img: "/home/questions/photo2.svg",
-      title:
-        "Chciałbyś umożliwić dostęp do aplikacji swoim klientom?",
-      desc: "Twoi klienci będą mogli zalogować się do dedykowanego panelu poprzez aplikację webową lub mobilną i łatwo dostarczać lub sprawdzić informacje, które Twoja firma im udostępni. Dzięki temu Twoi kontrahenci będą mieli dostęp np. do dokumentów czy formularzy. Będą mogli śledzić statystyki wykonywanych zadań oraz być w stałym kontakcie z Twoimi pracownikami.",
+      img: "/home/contact/process.svg",
+      title: "Wiedza techniczna i doświadczenie",
+      desc: "Nasz software house posiada specjalistów z różnych obszarów IT, którzy posiadają niezbędną wiedzę i doświadczenie. Dzięki temu potrafimy opracować, stworzyć i wdrożyć skuteczne rozwiązania programistyczne, które umożliwią bezproblemowe i bezstresowe zrealizowanie Twojego pomysłu na startup.",
     },
     {
       img: "/home/contact/process.svg",
-      title: "Czujesz, że w Twojej firmie potrzebna jest automatyzacja i digitalizacja procesów, ale nie wiesz jak za to się zabrać?",
-      desc: "Jesteśmy po to, aby ułatwić Tobie cały ten proces! Wspólnie określimy potrzeby, zaproponujemy możliwe funkcjonalności i stworzymy specyfikację wymagań Twojego oprogramowania.",
+      title: "Minimalizacja czasu i kosztów",
+      desc: "Współpraca z nami pomoże w znacznym zmniejszeniu czasu potrzebnego do opracowania i wdrożenia oprogramowania, a co za tym idzie również i kosztów. Dzięki korzystaniu ze sprawdzonych narzędzi do tworzenia oprogramowania, zaoszczędzimy Twój czas i pieniądze potrzebne na wdrożenie Twojego pomysłu.",
+    },
+    {
+      img: "/home/contact/process.svg",
+      title: "Skalowalność biznesu",
+      desc: "Nasz software house pomoże Tobie w zaprojektowaniu i wdrożeniu aplikacji, która będzie skalowalna i przygotowany do szybkiego rozwoju wraz z rozwojem firmy i Twoich dalszych planów. To oznacza, że Twój startup będzie miał możliwość rozwijania swojego produktu, w miarę jak będzie rosła liczba użytkowników.",
+    },
+    {
+      img: "/home/contact/process.svg",
+      title: "Wsparcie techniczne",
+      desc: "Współpraca z SOLTIX Software House zapewni Tobie wsparcie techniczne na każdym etapie rozwoju aplikacji. Nasi specjaliści będą pracować na bieżąco nad rozwiązywaniem ewentualnych problemów technicznych i dbać o to, aby Twój system działał bez zakłóceń.",
+    },
+    {
+      img: "/home/contact/process.svg",
+      title: "Dostęp do nowych technologii",
+      desc: "Nasz software house jest zorientowany na najnowsze trendy i technologie, co oznacza, że Twój startup, już od etapu planowania, będzie miał dostęp do najnowszych narzędzi oprogramowania, które przyniosą korzyści dla rozwoju Twojego produktu.",
     },
   ];
   gsap.registerPlugin(ScrollTrigger);
