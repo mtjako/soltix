@@ -116,7 +116,7 @@ export default function Hero({ title, subtitle, subtitleGray, main }) {
           id="myVideo"
           width="100%"
           height="100%"
-          src="/video/showReel.mp4"
+          src="/video/showReel2.mp4"
         />
         {/* <div className="primary">
           <Image
