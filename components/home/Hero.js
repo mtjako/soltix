@@ -109,7 +109,16 @@ export default function Hero({ title, subtitle, subtitleGray, main }) {
         </Link>
       </HeroText>
       <HeroImg>
-        <div className="primary">
+        <video
+          autoPlay
+          muted
+          loop
+          id="myVideo"
+          width="100%"
+          height="100%"
+          src="/video/showReel.mp4"
+        />
+        {/* <div className="primary">
           <Image
             width={570}
             height={675}
@@ -135,14 +144,14 @@ export default function Hero({ title, subtitle, subtitleGray, main }) {
             src="/home/hero/hero-man.svg"
             alt="hero image man"
           />
-        </div>
+        </div> */}
       </HeroImg>
     </HeroWrap>
   );
 }
 
 const InfoText = styled.div`
-margin: 25%;
+  /* margin: 25%; */
   color: #737373;
   margin-top: 8px;
   cursor: pointer;
@@ -162,7 +171,7 @@ const HeroWrap = styled.div`
   @media (max-width: 750px) {
     grid-template-columns: repeat(1, 1fr);
   }
-  min-height: calc(100vh - 72px);
+  /* min-height: calc(100vh - 72px); */
   align-items: center;
   max-width: 1140px;
   margin: 0 auto 100px;
