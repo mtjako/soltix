@@ -11,7 +11,7 @@ export default function Header({ title, subtitle, center }) {
 
 const HeaderWrapper = styled.div`
   text-align: ${(props) => (props.center ? "center" : "left")};
-  max-width: ${(props) => (props.center ? "540px" : "100%")};
+  max-width: ${(props) => (props.center ? "780px" : "100%")};
   width: 100%;
   margin: 0 auto;
   h2 {
@@ -26,7 +26,7 @@ const HeaderWrapper = styled.div`
     }
   }
   h3 {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 44px;
     margin-bottom: 12px;

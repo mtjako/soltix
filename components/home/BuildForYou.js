@@ -111,7 +111,7 @@ export default function BuildForYou() {
     <Wrapper>
       <div ref={TitleRef}>
         <Header
-          subtitle="Dla ciebie"
+          subtitle=""
           title="Jesteśmy gotowi stworzyć dla Państwa"
           center
         />
