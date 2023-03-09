@@ -38,10 +38,10 @@ export const Logos = () => {
               <div key={index} className={"tilesTile"}>
                 <Image
                   src={`/../public/logos/logo${
-                    index + 1 <= 9 ? index + 1 : index + 1 - 9
+                    index + 1 <= 10 ? index + 1 : index + 1 - 10
                   }.png`}
                   width={200}
-                  height={56}
+                  height={96}
                   alt=""
                 />
               </div>
@@ -79,7 +79,7 @@ const XD = styled.div`
   .tilesTile {
     min-width: 200px;
     width: 200px;
-    height: 56px;
+    height: 96px;
 
     margin-right: 24px;
     display: flex;
