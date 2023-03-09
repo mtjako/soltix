@@ -62,9 +62,9 @@ export default function Home() {
       <Logos />
       <CTASection />
       <BuildForYou />
-      <Features />
       <Contact />
       <Techs />
+      <Features />
       <Footer />
     </div>
   );
