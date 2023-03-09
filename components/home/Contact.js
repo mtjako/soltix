@@ -125,10 +125,14 @@ const ContactWrapper = styled.div`
     margin-bottom: 4px;
   }
   h2 {
+<<<<<<< HEAD
     font-size: 28px;
     @media (max-width: 750px) {
       font-size:26px;
   }
+=======
+    font-size: 26px;
+>>>>>>> c2323c0317083f3a6c5660045af87ca6ac4d55a7
     margin-bottom: 8px;
   }
   p {

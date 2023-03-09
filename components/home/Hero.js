@@ -188,10 +188,14 @@ const HeroText = styled.div`
     text-align: center;
   }
   .title {
+<<<<<<< HEAD
     font-size:28px;
       @media (max-width: 750px) {
         font-size:26px;
     }
+=======
+    font-size:26px;
+>>>>>>> c2323c0317083f3a6c5660045af87ca6ac4d55a7
   }
   .subtitle {
     font-size: 16px;
