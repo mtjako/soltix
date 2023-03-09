@@ -23,7 +23,13 @@ export default function Footer() {
               <Link href="/">Strona Główna</Link>
             </li>
             <li>
-              <Link href="/modeofaction">Jak wyglądają darmowe warsztaty?</Link>
+              <Link href="/modeofaction">Jak przebiega proces tworzenia</Link>
+            </li>
+            <li>
+              <Link href="/firmyProdukcyjne">Jak usprawniamy działanie</Link>
+            </li>
+            <li>
+              <Link href="/startup">Masz pomysł na startup</Link>
             </li>
             <li>
               <Link href="/contact">Kontakt</Link>
@@ -40,10 +46,11 @@ export default function Footer() {
             </li>
             <li>soltix@soltix.pl</li>
             <li>+48 603 197 858</li>
+            <li>+48 693 629 446</li>
           </ul>
         </div>
         <div className="footer">
-          <p>&copy; 2021 Soltix | All Rights Reserved</p>
+          <p>Copyright © 2023 SOLTIX Software House | Wszystkie prawa zastrzeżone.</p>
         </div>
       </FootWrap>
     </Foot>

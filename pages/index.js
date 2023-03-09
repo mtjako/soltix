@@ -1,13 +1,12 @@
 import Head from "next/head";
-import About from "../components/home/About";
+import Questions from "../components/home/Questions";
 import BuildForYou from "../components/home/BuildForYou";
 import Contact from "../components/home/Contact";
 import CTASection from "../components/home/CTASection";
-import Distinctions from "../components/home/Distinctions";
+import Header from "../components/layout/Header";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
 import { Logos } from "../components/home/Logos";
-// import Questions from "../components/home/Questions";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import styles from "../styles/Home.module.css";
@@ -15,15 +14,24 @@ import { Techs } from "../components/home/TechSlider";
 
 const data = [
   {
-    title:
-      "Pewnie wciąż dużo procesów w Twojej firmie jest przetwarzanych na kartkach, arkuszach kalkulacyjnych lub innych dokumentach…",
-    text: "Przenieśmy więc procesy do łatwo dostępnej aplikacji webowej lub mobilnej. Każdy pracownik łatwo wprowadzi niezbędne dane a wszystko zostanie zebrane w chmurze i będzie łatwo dostępne, np.: kadrze zarządczej, której umożliwi natychmiastowy dostęp do informacji co zwiększy kontrolę przepływu procesów.",
     image: "/home/questions/photo.svg",
+    title: "Komunikacja",
+    text: "Oprogramowanie ściśle dostosowane do specyfiki działalności Twojej firmy produkcyjnej pozwoli na zautomatyzowanie wielu procesów, co z kolei przyspieszy całą produkcję i zminimalizuje możliwość ewentualnych odchyleń od założonych norm oraz popełnienia błędów.",
   },
   {
-    title: "Chciałbyś umożliwić dostęp do aplikacji swoim klientom?",
-    text: "Twoi klienci będą mogli zalogować się do dedykowanego panelu poprzez aplikację webową lub mobilną i łatwo dostarczać lub sprawdzić informacje, które Twoja firma im udostępni. Dzięki temu Twoi kontrahenci będą mieli dostęp np. do dokumentów czy formularzy. Będą mogli śledzić statystyki wykonywanych zadań oraz być w stałym kontakcie z Twoimi pracownikami.",
     image: "/home/questions/photo2.svg",
+    title: "Warsztaty",
+    text: "Dedykowane oprogramowanie tworzone “od zera” umożliwi Tobie łatwiejsze monitorowanie procesów produkcyjnych na każdym ich etapie - od stworzenia koncepcji po wysłanie finalnego produktu do klienta. Pozwoli także na szybką reakcję osób decyzyjnych na ewentualne problemy i błędy.",
+  },
+  {
+    image: "/home/contact/process.svg",
+    title: "Proces",
+    text: 'Oprogramowanie "szyte na miarę" pomoże w gromadzeniu, przetwarzaniu i analizowaniu wszelkich danych związanych z produkcją. Dzięki temu Twoja firma będzie mogla dokładnie śledzić, jakie procesy produkcyjne przynoszą najlepsze wyniki i na tej podstawie podejmować strategiczne decyzje.',
+  },
+  {
+    image: "/home/contact/process.svg",
+    title: "Efekt",
+    text: "Zastosowanie stworzonego przez nas oprogramowania pozwoli na lepszą koordynację prac pomiędzy różnymi działami w firmie. To z kolei, np. poprzez natychmiastową wymianę informacji, bezpośrednio przełoży się na zwiększenie efektywności i wydajności całego Twojej firmy.",
   },
 ];
 
@@ -46,14 +54,17 @@ export default function Home() {
         subtitle=""
         main
       />
-      <Distinctions title="Dlaczego jesteśmy idealnym partnerem dla Ciebie lub Twojej firmy?" />
+      <Header
+        title="Dlaczego jesteśmy idealnym partnerem dla firm produkcyjnych?"
+        center
+      ></Header>
+      <Questions data={data} />
       <Logos />
-      {/* <Questions data={data} /> */}
       <CTASection />
       <BuildForYou />
-      <Features />
       <Contact />
       <Techs />
+      <Features />
       <Footer />
     </div>
   );

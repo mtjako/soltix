@@ -60,6 +60,9 @@ const XD = styled.div`
   .logos h2 {
     font-weight: 700;
     font-size: 28px;
+    @media (max-width: 750px) {
+      font-size:26px;
+  }
     text-align: center;
     margin: 0 0 48px;
   }

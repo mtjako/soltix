@@ -198,8 +198,9 @@ export default function Features() {
       <FeaturesWrapperText ref={WrapRef}>
         <div ref={TitleRef}>
           <Header
-            subtitle="Wybrane usługi"
+            subtitle=""
             title="Dziedziny, których jesteśmy najbardziej doświadczeni"
+            center
           />
         </div>
         <p ref={TextRef}>
@@ -222,7 +223,7 @@ export default function Features() {
 }
 
 const FeaturesWrapperText = styled.div`
-  width: 50%;
+  width: 100%;
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -231,6 +232,7 @@ const FeaturesWrapperText = styled.div`
     font-size: 16px;
     font-weight: 400;
     color: #696969;
+    text-align: center;
     @media (max-width: 768px) {
       text-align: center;
     }

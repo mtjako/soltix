@@ -11,7 +11,7 @@ export default function Header({ title, subtitle, center }) {
 
 const HeaderWrapper = styled.div`
   text-align: ${(props) => (props.center ? "center" : "left")};
-  max-width: ${(props) => (props.center ? "540px" : "100%")};
+  max-width: ${(props) => (props.center ? "780px" : "100%")};
   width: 100%;
   margin: 0 auto;
   h2 {
@@ -33,6 +33,7 @@ const HeaderWrapper = styled.div`
     color: ${(props) => props.theme.neutral900};
     @media (max-width: 768px) {
       text-align: center;
+      font-size:26px;
     }
   }
 `;
