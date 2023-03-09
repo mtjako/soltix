@@ -64,7 +64,7 @@ const XD = styled.div`
   }
   .techs h2 {
     font-weight: 700;
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
     margin: 0 0 48px;
   }

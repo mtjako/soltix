@@ -26,7 +26,7 @@ const HeaderWrapper = styled.div`
     }
   }
   h3 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 44px;
     margin-bottom: 12px;

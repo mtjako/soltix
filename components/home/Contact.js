@@ -125,7 +125,7 @@ const ContactWrapper = styled.div`
     margin-bottom: 4px;
   }
   h2 {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 8px;
   }
   p {

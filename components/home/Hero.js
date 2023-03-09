@@ -188,7 +188,7 @@ const HeroText = styled.div`
     text-align: center;
   }
   .title {
-    font-size:28px;
+    font-size:26px;
   }
   .subtitle {
     font-size: 16px;
