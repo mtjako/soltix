@@ -33,6 +33,7 @@ const HeaderWrapper = styled.div`
     color: ${(props) => props.theme.neutral900};
     @media (max-width: 768px) {
       text-align: center;
+      font-size:26px;
     }
   }
 `;

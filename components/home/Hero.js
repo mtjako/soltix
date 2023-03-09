@@ -61,13 +61,13 @@ export default function Hero({ title, subtitle, subtitleGray, main }) {
     gsap.set(HeroDescRef.current, { x: "0" });
     //CURSOR TYPING
     const words = [
-      "firmie produkcyjnej",
-      "firmie transportowej",
-      "magazynie",
-      "kancelarii prawnej",
+      "w firmie produkcyjnej",
+      "w firmie transportowej",
+      "w magazynie",
+      "w kancelarii prawnej",
       "sklepu internetowego",
       "działu HR",
-      "firmie usługowej",
+      "w firmie usługowej",
     ];
     let cursor = gsap.to(".cursor", {
       opacity: 0,
@@ -93,7 +93,7 @@ export default function Hero({ title, subtitle, subtitleGray, main }) {
         </div>
         {main && (
           <p ref={HeroDescRef} className="desc">
-            Usprawniamy procesy w&nbsp;
+            Usprawniamy procesy&nbsp;
             <br className="break"></br>
             <span className="text"></span>
             <span className="cursor">|</span>
@@ -189,6 +189,9 @@ const HeroText = styled.div`
   }
   .title {
     font-size:28px;
+      @media (max-width: 750px) {
+        font-size:26px;
+    }
   }
   .subtitle {
     font-size: 16px;
@@ -248,10 +251,8 @@ const HeroMove = keyframes`
 `;
 
 const HeroImg = styled.div`
-  @media (max-width: 750px) {
-    width: 75%;
-    margin: 0 auto;
-  }
+  width: 75%;
+  margin: 0 auto;
   position: relative;
   padding-top: 32px;
 
