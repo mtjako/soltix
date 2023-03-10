@@ -114,8 +114,13 @@ const Section = styled.div`
   h2 {
     font-size: 30px;
     margin-bottom: 12px;
+    text-align: center;
+
+    
   }
   p {
     font-size: 18px;
+    text-align: center;
+
   }
 `;

@@ -10,7 +10,7 @@ export const Logos = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setScrollPosition(logsDiv.current.scrollLeft);
-    }, 50);
+    }, 15);
     return () => clearInterval(interval);
   }, []);
 
@@ -24,7 +24,7 @@ export const Logos = () => {
       } else {
         logsDiv.current.scrollLeft = scrollPosition + 1;
       }
-    }, 50);
+    }, 15);
     return () => clearInterval(interval);
   }, [scrollPosition]);
 

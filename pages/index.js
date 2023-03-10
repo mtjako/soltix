@@ -55,7 +55,7 @@ export default function Home() {
         main
       />
       <Header
-        title="Dlaczego jesteśmy idealnym partnerem dla firm produkcyjnych?"
+        title="Dlaczego jesteśmy idealnym partnerem dla Twojej firmy:"
         center
       ></Header>
       <Questions data={data} />

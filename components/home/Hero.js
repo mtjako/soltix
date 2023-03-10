@@ -252,6 +252,11 @@ const HeroMove = keyframes`
 
 const HeroImg = styled.div`
   width: 75%;
+  @media (max-width: 750px) {
+  width: 89%;
+  max-width: 476px;
+  position: relative;  
+  }
   margin: 0 auto;
   position: relative;
   padding-top: 32px;
