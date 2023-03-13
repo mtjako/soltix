@@ -37,7 +37,7 @@ export const Logos = () => {
             {[...logos, ...logos].map((logo, index) => (
               <div key={index} className={"tilesTile"}>
                 <Image
-                  src={`/../public/logos/logo${
+                  src={`/../public/logos/logos${
                     index + 1 <= 10 ? index + 1 : index + 1 - 10
                   }.png`}
                   width={200}
